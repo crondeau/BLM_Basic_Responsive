@@ -114,6 +114,7 @@ p {
 	margin:0;
 	padding:0 0 0.9375em;
 	word-wrap: break-word;
+	 -ms-word-break: break-all;
 }
 
 h1,h2,h3,h4,h5,h6 {
