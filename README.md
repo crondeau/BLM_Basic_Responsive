@@ -11,7 +11,9 @@ The basic theme was started 4 years ago with a now retired theme call by fSpring
 At the time, Kubrick was very popular but I felt it just contained too much junk.
 Using the fSpring widgets theme, I cleaned it up and created a basic starter theme to use for all of my custom themes.
 
-With the release of Twenty Eleven, Twenty Ten, Sandbox, Emil's Responsive, Devin Price's Portfolio theme, Michael Fields Ghostbird and Elliot Jay Stocks, Starkers, I've had the chance to look at how things are now done and I've refined my theme and improved it immensely.
+With the release of Twenty Eleven, Twenty Ten, Sandbox, Emil's Responsive, Devin Price's Portfolio theme, 
+Michael Fields Ghostbird and Elliot Jay Stocks, Starkers, I've had the chance to look at how things are now done and I've 
+refined my theme and improved it immensely.
 
 --------------------------------------------------------
 
@@ -21,7 +23,7 @@ Just like the original version, this theme is devoid of design elements and so w
 It's also missing some recommended features which would be needed if you wanted to release a theme in the WordPress repository.
 
 For example - my theme does not have comments on pages. I've never coded a site that needs them and so just don't have them in there.
-I also don't have the code required doe custom background and colours. I'd rather have control of the design, thank you very much.
+I also don't have the code required for custom background and colours. I'd rather have control of the design, thank you very much.
 The theme doesn't have attachment or links templates... Again, I've never had a need for those.
 
 If you want to create a simple custom theme, this might be the theme for you.
