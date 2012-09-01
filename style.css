@@ -9,49 +9,94 @@ Author: Christine Rondeau and Robert Dall
 Author URI: http://www.bluelimemedia.com
 */
 
-/* Normalize CSS
-http://github.com/necolas/normalize.css */
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}
-audio,canvas,video{display:inline;zoom:1px}
-html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}
-body,button,input,select,textarea{font-family:sans-serif}
-a:focus{outline:thin dotted}
-a, a:hover,a:active{outline:0}
-h1{font-size:2em}
-abbr[title]{border-bottom:1px dotted}
-b,strong{font-weight:700}
-blockquote{margin:1em 40px}
-dfn{font-style:italic}
-mark{background:#ff0;color:#000}
-pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
-pre{white-space:pre-wrap;word-wrap:break-word}
-q{quotes:none}
-q:before,q:after{content:none}
-small{font-size:75%}
-sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
-sup{top:-0.5em}
-sub{bottom:-0.25em}
-ul,ol{margin:0;padding:0}
-dd{margin:0 0 0 40px}
-nav ul,nav ol{list-style:none;list-style-image:none}
-img{border:0;-ms-interpolation-mode:bicubic}
-svg:not(:root){overflow:hidden}
-fieldset{border:1px solid silver;margin:0 2px;padding:0.35em 0.625em 0.75em}
-legend{border:0;margin-left:-7px}
-button,input,select,textarea{font-size:100%;vertical-align:middle;margin:0}
-button,input{line-height:normal}
-button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;overflow:visible}
-input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
-input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
-button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
-textarea{overflow:auto;vertical-align:top}
-table{border-collapse:collapse;border-spacing:0}
-td{vertical-align:top}
-audio:not([controls]),[hidden]{display:none}
-body,figure,form{margin:0}
+/* Reset  
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+ol, ul {list-style: none;}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {outline: thin dotted;}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {border: 0;}
 
-/* Images
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+/* Global 
+---------------------------------------------*/
+body {background:#eee;}
+body,
+button,
+input,
+select,
+textarea {
+	-moz-font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+	color: #333;
+	font-family: 'helvetica neue', arial, sans-serif;
+	font-size: 16px; /* pixels are needed for IE 8 and lower :( */
+	font-size: 1.6rem; /* Snooka explains font resizing using rem - http://snook.ca/archives/html_and_css/font-size-with-rem */
+	line-height: 1.5;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Image Alignment
 ----------------------------------------------*/
 .alignleft {
 	display:inline;
@@ -76,25 +121,44 @@ body,figure,form{margin:0}
 	margin-bottom: 0.625em;
 	border:1px solid #f6f6f6;
 	padding:0.25em;
+	max-width: 100%;
 }
 
 .wp-caption img {
-	margin:0.3125em 0.3125em 0;
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
 }
-
+	
 .wp-caption-text {
 	color:#aaa;
-	text-align:center;
-	font-size:11px;
-	margin:0.25em;
+	text-align: center;
+	font-size:13px;
+	font-size:1.3rem;
+}	
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
 }
 
-/* Make sure embeds and iframes fit their containers */
+/* Media 
+-----------------------------------------*/
 embed,
 iframe,
 object,
 #main img {
 	max-width: 100%;
+}
+#branding img,
+#content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+#branding img,
+#content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
 /* General Styles 
@@ -106,13 +170,15 @@ object,
 a {
 	color:#666;
 }
-a:hover {
+a:hover,
+a:focus,
+a:active {
 	color:#000;
 }
 
 p {
 	margin:0;
-	padding:0 0 0.9375em;
+	margin-bottom: 1.5em;
 	word-wrap: break-word;
 	 -ms-word-break: break-all;
 }
@@ -123,14 +189,16 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h1 {
-	font-size:1.875em;
-	line-height:1.75em;
+	font-size:30px;
+	font-size:3.0rem;
+	line-height:1.75em; /* 28px /16px */
 	margin:0 0 0.625em;
 }
 
 h2,h2 a,h3,h4,h5,h6 {
-	font-size:1.286em;
-	line-height:1.857em;
+	font-size:22px;
+	font-size:2.2rem;
+	line-height:1.25em; /*20px / 16px */
 	margin:0.625em 0;
 }
 
@@ -146,28 +214,18 @@ blockquote {
 	color:#000;
 	border-top:1px solid #000;
 	border-bottom:1px solid #000;
-	font-size:1.5625em;
-	line-height:1.2em;
+	font-size:22px;
+	font-size:2.2rem;
+	line-height:1.625em; /* 26px / 16px */
 	font-style:italic;
 	font-family:Georgia, Times, 'Times New Roman', serif;
 	margin:0.625em 0;
 	padding:0.625em;
 }
 
+
 /* Main Layout
 -----------------------------------------------*/
-body {
-	-moz-font-smoothing:antialiased;
-	-webkit-font-smoothing:antialiased;
-	background:#eee;
-	color:#333;
-	font-size:14px;
-	line-height:1.5em;
-	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-	margin:0;
-	padding:0;
-}
-
 #wrap {
 	position:relative;
 	width:1000px;
@@ -176,14 +234,13 @@ body {
 	padding:0;
 }
 
-/* Header Area 
------------------------------------------------------------*/
 #branding {
 	float:left;
 	width:100%;
 	height:auto;
 	position:relative;
 }
+
 #branding img {
 	height: auto;
 	margin-bottom:-7px;
@@ -197,6 +254,7 @@ body {
 }
 #logo a {
 	font-size:30px;
+	font-size:3.0rem;
 	line-height:1.75em;
 	font-weight:bold;
 	text-decoration:none;
@@ -284,7 +342,7 @@ a.github {
 	width: 100%;
 }
 #top_nav ul {
-	font-size: 14px;
+	font-size: 0.857em; /* 14px / 16px */
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
@@ -296,8 +354,8 @@ a.github {
 #top_nav a {
 	color: #eee;
 	display: block;
-	line-height: 3.333em;
-	padding: 0 1.2125em;
+	line-height: 3em; /* 48px / 16px */
+	padding: 0 1.25em; /* 20px / 16px */
 	text-decoration: none;
 }
 #top_nav ul ul {
@@ -308,7 +366,7 @@ a.github {
 	float: left;
 	margin: 0;
 	position: absolute;
-	top: 3.333em;
+	top: 3.4375em;
 	left: 0;
 	width: 188px;
 	z-index: 99999;
@@ -321,7 +379,8 @@ a.github {
 	background: #f9f9f9;
 	border-bottom: 1px dotted #ddd;
 	color: #444;
-	font-size: 13px;
+	font-size: 14px;
+	font-size:1.4rem;
 	font-weight: normal;
 	height: auto;
 	line-height: 1.4em;
@@ -386,8 +445,10 @@ a.github {
 }
 
 .entrymeta p {
-	padding:0.3125em 0; 
-	font-size:12px;
+	margin:0.3125em 0; 
+	font-size:13px;
+	font-size:1.3rem;
+	line-height:1.125em; /* 18px / 16px */
 }
 
 .post-navigation {
@@ -419,11 +480,12 @@ a.github {
 }
 
 #sidebar h4 {
-	margin:0 0 2px; 
-	padding:0 0 2px;
+	margin:0 0 1.25em; 
+	padding:0 0 1.25em; 
 	border-bottom: 1px solid #d4d4d4;
 	text-transform: uppercase;
-	font-size:14px;
+	font-size:16px;
+	font-size:1.6rem;
 }
 
 #sidebar ul {
@@ -431,7 +493,7 @@ a.github {
 }
 
 #sidebar ul li {
-	padding:5px 10px;
+	padding:0.3125em 0.625em;
 }
 
 #sidebar a {
@@ -447,42 +509,7 @@ a.github {
 	display:none;
 }
 
-/* Search Form
--------------------------------------------*/
 
-#searchform {
-	position: relative;
-	display: inline-block;
-	width: 98%;
-}
-
-#searchform #searchsubmit {
-	margin-left:2px;
-	padding:4px; 
-	float: left;
-	vertical-align:middle;
-	background: #FFF;
-	cursor:pointer;
-	display:inline-block;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #ccc;
-	font-size:12px;
-}
-
-#searchform input#s {
-	width: 75%;
-	height: 1.5em;
-	float: left;
-	padding:2px 5px;
-	vertical-align: middle;
-	-moz-border-radius:3px;
-	-webkit-border-radius:3px;
-	border-radius:3px;
-	border:1px solid #ccc;
-	font-size:12px;
-}
 
 /* Footer area
 ------------------------------------------------------------*/
@@ -495,7 +522,7 @@ footer {
 }
 
 footer p {	
-	font-size:12px; 
+	font-size:0.75em; 
 	color:#d4d4d4;
 	padding:0.625em;
 }
@@ -510,123 +537,188 @@ footer a:hover {
 	color:#d4d4d4;
 }
 
-/* Comments													
------------------------------------------------------*/
-h3#comments { 
-	margin:1.875em 0 0.625em; 
+
+/* Comments
+----------------------------------------------- */
+.bypostauthor {
 }
-		
 .avatar {
 	float: left;
 	display:block;
 	padding: 0 1.25em 0.625em 0;
-}
-		
-.commentmetadata {
-	margin-top: 0;
-}
-
-ol#commentlist, ol#commentlist li {	
+}		
+.commentlist {padding: 1.25em 0;}
+.commentmetadata {margin-top: 0;}
+ol.commentlist, ol.commentlist li {	
 	list-style: none;
-	margin:0; 
-	padding:0;
+	margin:0; padding:0;
 }
-
-ol#commentlist li {
-	padding:10px; 
-	margin:0.9375em 0;
+ol.commentlist li {
+	font-size:14px; 
+	font-size:1.4rem;
+	line-height:1.25em;
+	padding:0.625em; 
+	margin:1em 0;
 	border:1px solid #eee;
 }
-ol#commentlist li li {
+ol.commentlist ul li,
+ol.commentlist ol li {
 	border:none;
 }
-
-ol#commentlist ul.children {
-	margin:0.625em 0.625em 0 1.5625em;
+ol.commentlist ul li{
+	list-style:disc;
+}
+ol.commentlist ol li {
+	list-style:decimal;
+}
+ol.commentlist ul.children {
+	margin:0.625em 0.625em 0 1.25em;
 	padding:0;
 }
-
-ol#commentlist ul.children li {
+ol.commentlist ul.children li {
 	border:none;
 	border-top:1px solid #eee;
+	list-style:none;
+}
+ol.commentlist li p {
+	padding:0.625em 0;
+
+}
+.commentform {padding:1.25em; 0;}
+.commentform p {margin-bottom:0.625em;}
+
+/* Hides the content explaining what html tags are allowed*/
+.form-allowed-tags {display:none;}
+
+/* Forms and buttons 
+--------------------------------*/
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #DDD;
+	border-color: #DDD #DDD #bbb #DDD;
+	border-radius: 3px;
+	background: #fafafa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#fafafa), color-stop(100%,#e6e6e6)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* IE10+ */
+	background: linear-gradient(top,  #fafafa 60%,#e6e6e6 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#e6e6e6',GradientType=0 ); /* IE6-9 */
+	box-shadow: inset 0 2px 1px #fff;
+	color: rgba(0,0,0,.8);
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 2;
+	padding: 1.12em 1.5em .88em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.5);
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #f5f5f5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f5f5f5 60%, #dcdcdc 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(60%,#f5f5f5), color-stop(100%,#dcdcdc)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* IE10+ */
+	background: linear-gradient(top,  #f5f5f5 60%,#dcdcdc 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#dcdcdc',GradientType=0 ); /* IE6-9 */
+	border-color: #bbb #bbb #aaa #bbb;
+}
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	box-shadow: inset 0 2px 3px rgba(0,0,0,.15);
+	box-shadow: inset 0 2px 2px rgba(0,0,0,.15);
+}
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+textarea {
+	color: #666;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+input[type=text]:focus,
+textarea:focus {
+	color: #111;
+}
+input[type=text] {
+	padding: 3px;
+	margin-left:5px;
+}
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
 }
 
-ol#commentlist li p {
-	font-size:14px;
-	line-height:1.25em;
-	padding:6px 0;
+/* Search Form
+-------------------------------------------*/
+#searchform {
+	position: relative;
+	display: inline-block;
+	width: 98%;
 }
 
-#commentform p {
-	margin-bottom:0.625em;
+#searchform #searchsubmit {
+	margin-left:0.125em;
+	padding:0.3125em; 
+	float: left;
+	vertical-align:middle;
+
 }
 
-#commentlist, #commentform {
-	padding:1.25em 0;
+#searchform input#s {
+	width: 70%;
+	float: left;
+	padding: 0.9375em 0.625em;
+	font-size:0.8125em;
 }
-
-/* Respond (comments form area)
------------------------------------------------------*/
-#respond {
-	padding:0 0.0625em;
-}
-
-#respond form {
-	overflow:hidden;
-	border:1px solid #eee;
-	padding:1.25em 1.25em 0.25em;
-}
-
-#respond label {
-	font-size:14px;
-	padding:0 0 0.625em;
-}
-
-#respond p {
-	margin:0 0 0.9375em;
-}
-
-#respond .required {
-	color:#ba0000;
-}
-
-#respond input[type="text"],#respond input[type="email"],#respond input[type="url"] {
-	display:block;
-	width:230px;
-	height:33px;
-	color:#333;
-	padding:0 0.625em;
-	border:1px solid #eee;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	padding:4px;
-}
-
-#respond textarea {
-	width:93%;
-	color:#333;
-	border:1px solid #eee;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	padding:4px;
-}
-
-#submit,.reply a {
-	background:#333;
-	color:#fff;
-	font-size:14px;
-	border:none;
-	-moz-border-radius:4px;
-	border-radius:4px;
-	text-decoration:none;
-	padding:0.1875em 0.625em;
-}
-
-#submit:hover {
-	cursor:pointer;
-}
-
-.form-allowed-tags {display:none;}/* Hides all the crap about html tags*/
 
 
 /* =Media Print
@@ -663,12 +755,12 @@ ol#commentlist li p {
 	}
 	#content {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
 	#sidebar {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
 }
@@ -678,7 +770,8 @@ ol#commentlist li p {
 		width: 96%; 
 		padding:0;
 	}
-	.social-media {display:none;}
+	.social-media, 
+	#branding img {display:none;}
 	#top_nav li {
 		float:none; 
 		padding:0; margin:0; 
@@ -686,12 +779,12 @@ ol#commentlist li p {
 	}
 	#content {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
 	#sidebar {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
    
@@ -702,7 +795,8 @@ ol#commentlist li p {
 		width: 96%; 
 		padding:0;
 	}
-	.social-media {display:none;}
+	.social-media, 
+	#branding img {display:none;}
 	#top_nav li {
 		float:none; 
 		padding:0; margin:0; 
@@ -710,12 +804,12 @@ ol#commentlist li p {
 	}
 	#content {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
 	#sidebar {
 		float:left; 
-		width:98%; 
+		width:96%; 
 		padding:2%;
 	}
 

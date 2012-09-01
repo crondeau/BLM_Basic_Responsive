@@ -11,12 +11,11 @@
 <!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
-	<head>
-		<meta charset="<?php bloginfo('charset'); ?>" />
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title><?php wp_title(); ?></title>
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title><?php wp_title('&#124;', true, 'right'); ?><?php bloginfo('name'); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/favicon.ico" />
@@ -44,6 +43,9 @@
 	<?php } ?>
 	</header>
 	
-	<nav id="top_nav">
+	<nav id="top_nav" role="navigation" class="site-navigation">		
+		<h1 class="assistive-text"><?php _e( 'Menu', 'blm_basic' ); ?></h1>
+		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'blm_basic' ); ?>"><?php _e( 'Skip to content', 'blm_basic' ); ?></a></div>
+		
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 	</nav>
