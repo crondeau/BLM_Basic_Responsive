@@ -15,6 +15,8 @@ With the release of Twenty Eleven, Twenty Ten, Sandbox, Emil's Responsive, Devin
 Michael Fields Ghostbird and Elliot Jay Stocks, Starkers, I've had the chance to look at how things are now done and I've 
 refined my theme and improved it immensely.
 
+Thanks to Devin Price, Flynn O'Connor, Richard Archambault and Puneet Sahalot who took the time to look at this theme and provided feedback.
+
 --------------------------------------------------------
 
 THIS THEME IS TO BE USED FOR BUILDING CUSTOM THEMES ONLY.
@@ -28,7 +30,15 @@ The theme doesn't have attachment or links templates... Again, I've never had a 
 
 If you want to create a simple custom theme, this might be the theme for you.
 So check it out.
- 
+
+
+------------------------
+NAVIGATION
+
+On smaller screen you may decide to implement a different way to display your menu. 
+The header.php and functions.php currently have the code from Automattic's _s, so you can style your menu that way if you want.
+You could also opt for one of the many other solutions. 
+
 
 ----------
 INSTALLATION

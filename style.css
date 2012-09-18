@@ -250,12 +250,12 @@ blockquote {
 #logo {
 	display:block;
 	float:left;
-	margin:2.5em 0 0.625em 2.5em;
+	margin:2em 0 0.625em 1.25em;
 }
 #logo a {
 	font-size:30px;
 	font-size:3.0rem;
-	line-height:1.75em;
+	line-height:1.5em;
 	font-weight:bold;
 	text-decoration:none;
 }
@@ -354,7 +354,10 @@ a.github {
 #top_nav a {
 	color: #eee;
 	display: block;
-	line-height: 3em; /* 48px / 16px */
+	font-size: 16px;
+	font-size:1.6rem;
+	font-weight: normal;
+	line-height:2.5em;
 	padding: 0 1.25em; /* 20px / 16px */
 	text-decoration: none;
 }
@@ -379,9 +382,6 @@ a.github {
 	background: #f9f9f9;
 	border-bottom: 1px dotted #ddd;
 	color: #444;
-	font-size: 14px;
-	font-size:1.4rem;
-	font-weight: normal;
 	height: auto;
 	line-height: 1.4em;
 	padding: 10px;
@@ -710,7 +710,6 @@ textarea {
 	padding:0.3125em; 
 	float: left;
 	vertical-align:middle;
-
 }
 
 #searchform input#s {
@@ -748,7 +747,7 @@ textarea {
 
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 768px) {
 	#wrap {
 		width: 98%; 
 		padding:0;
@@ -768,7 +767,6 @@ textarea {
 @media screen and (max-width: 480px) {
 	#wrap {
 		width: 96%; 
-		padding:0;
 	}
 	.social-media, 
 	#branding img {display:none;}
@@ -776,41 +774,15 @@ textarea {
 		float:none; 
 		padding:0; margin:0; 
 		border-bottom:1px solid #FFF;
-	}
-	#content {
-		float:left; 
-		width:96%; 
-		padding:2%;
-	}
-	#sidebar {
-		float:left; 
-		width:96%; 
-		padding:2%;
 	}
    
 }
 
 @media screen and (max-width: 320px) {
-	#wrap {
-		width: 96%; 
-		padding:0;
-	}
-	.social-media, 
-	#branding img {display:none;}
-	#top_nav li {
-		float:none; 
-		padding:0; margin:0; 
-		border-bottom:1px solid #FFF;
-	}
-	#content {
-		float:left; 
-		width:96%; 
-		padding:2%;
-	}
-	#sidebar {
-		float:left; 
-		width:96%; 
-		padding:2%;
+	#logo a {
+		font-size:20px;
+		font-size:2.0rem;
+		line-height:1em;
 	}
 
 }
