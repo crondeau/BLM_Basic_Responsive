@@ -3,7 +3,6 @@
  * blm_basic Theme Options
  *
  * @package blm_basic
- * @since blm_basic 1.0
  */
 
 /**
@@ -17,7 +16,6 @@
  *
  * We also use this function to add our theme option if it doesn't already exist.
  *
- * @since blm_basic 1.0
  */
 
 

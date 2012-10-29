@@ -1,3 +1,10 @@
+<?php
+/**
+ * This template generates links to social media icons once set in the theme options.  
+ *
+ * @package blm_basic
+ */
+?>
 <?php $options = get_option( 'blm_basic_theme_options' ); ?>
 
 	<ul class="social-media">

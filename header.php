@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+<?php
+/**
+ * The Header for our theme.
+ *
+ * Displays all of the <head> section, header and top navigation areas
+ *
+ * @package _s
+ * @since _s 1.0
+ */
+?><!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->
@@ -34,7 +43,8 @@
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
 		<?php get_template_part( 'inc/socmed' ); ?>
 
-	<!-- if there's a header image, let's display it here -->
+	<!-- if there's a header image, let's display it here 
+		 if you don't want to use the header image, just delete lines 37 to 44-->
 	<?php $header_image = get_header_image();
 	if ( ! empty( $header_image ) ) { ?>
 
@@ -43,7 +53,7 @@
 	<?php } ?>
 	</header>
 	
-	<nav id="top_nav" role="navigation" class="site-navigation">		
+	<nav id="top-nav" role="navigation" class="site-navigation">		
 		<h1 class="assistive-text"><?php _e( 'Menu', 'blm_basic' ); ?></h1>
 		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'blm_basic' ); ?>"><?php _e( 'Skip to content', 'blm_basic' ); ?></a></div>
 		

@@ -1,4 +1,15 @@
 <?php
+/**
+ * The template for displaying Comments.
+ * Both Comment form and the comments themselves are generated
+ * The form is simply the standard WordPress as described in the Codex reference: comment_form()
+ *
+ * @link http://codex.wordpress.org/Function_Reference/comment_form
+ * @package blm_basic
+ */
+?>
+
+<?php
 	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
 		die ( 'Please do not load this page directly. Thanks.' );
 
