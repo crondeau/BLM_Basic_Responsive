@@ -41,16 +41,17 @@
 		<hgroup>
 			<h1 id="logo"><a href="<?php echo home_url() ?>/"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
-		<?php get_template_part( 'inc/socmed' ); ?>
+			<?php get_template_part( 'inc/socmed' ); ?>
 
 	<!-- if there's a header image, let's display it here 
-		 if you don't want to use the header image, just delete lines 37 to 44-->
+		 if you don't want to use the header image, just delete lines 46 to 53-->
 	<?php $header_image = get_header_image();
 	if ( ! empty( $header_image ) ) { ?>
 
 		<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 
 	<?php } ?>
+		</hgroup>
 	</header>
 	
 	<nav id="top-nav" role="navigation" class="site-navigation">		
