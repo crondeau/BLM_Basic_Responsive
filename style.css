@@ -1,10 +1,13 @@
 /*
 Theme Name: Bluelime Media Responsive Basic Starter theme	
 Theme URI: http://www.bluelimemedia.com
-Description: Basic html5 starter theme
-Version: 1.0
-License: GNU General Public License
-License URI: GPL.txt
+Description: Basic Responsive Starter Theme
+Version: 2.0
+
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+More information: http://codex.wordpress.org/Theme_Review#Licensing
+
 Author: Christine Rondeau and Robert Dall 
 Author URI: http://www.bluelimemedia.com
 */
@@ -28,10 +31,13 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
 	display: block;
 }
-
+ol, ul {
+	list-style: none;
+}
 table { /* tables still need 'cellspacing="0"' in the markup */
 	border-collapse: separate;
 	border-spacing: 0;
@@ -47,12 +53,16 @@ q:before, q:after {
 blockquote, q {
 	quotes: "" "";
 }
-a:focus {outline: thin dotted;}
+a:focus {
+	outline: thin dotted;
+}
 a:hover,
 a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
 	outline: 0;
 }
-a img {border: 0;}
+a img {
+	border: 0;
+}
 
 /* Text meant only for screen readers */
 .assistive-text {
@@ -63,7 +73,7 @@ a img {border: 0;}
 
 /* Global 
 ---------------------------------------------*/
-body {background: #eee;}
+body {background: #fff;}
 body,
 button,
 input,
@@ -87,6 +97,94 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+ul, ol {
+	margin: 0 0 1.5em 2em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
 }
 
 /* Image Alignment
@@ -280,11 +378,11 @@ a.vimeo {
 a.googleplus {
 	background: transparent url(images/social-media.png) -270px 0 no-repeat;
 }
-a.dribble {
-	background: transparent url(images/social-media.png) -305px 0 no-repeat;
-}
 a.delicious {
-	background: transparent url(images/social-media.png) -339px 0 no-repeat;
+	background: transparent url(images/social-media.png) -304px 0 no-repeat;
+}
+a.dribble {
+	background: transparent url(images/social-media.png) -338px 0 no-repeat;
 }
 a.github {
 	background: transparent url(images/social-media.png) -373px 0 no-repeat;
@@ -295,7 +393,7 @@ a.github {
 	text-indent: -9999px;
 	opacity: 0.3;
 	filter:alpha(opacity=30); /* For IE8 and earlier */ 
-	width: 25px; 	
+	width: 26px; 	
 }
 .social-media li a:hover{
 	opacity: 1;
@@ -453,15 +551,18 @@ a.github {
 	border-bottom: 1px solid #d4d4d4;
 	font-size: 16px;
 	font-size: 1.6rem;
-	margin: 0 0 1.25em; 
-	padding: 0 0 1.25em; 
+	margin: 0 0 1em; 
+	padding: 0 0 0.5em; 
 	text-transform: uppercase;	
 }
 #sidebar ul {
 	list-style: none;
+	margin-left: 0.5em;
 }
 #sidebar ul li {
-	padding: 0.3125em 0.625em;
+	padding: 0.5em 0;
+	font-size: 14px;
+	font-size: 1.4rem;
 }
 #sidebar a {
 	color: #4d4d4d;
@@ -506,17 +607,17 @@ footer a:hover {
 	float: left;
 	padding: 0 1.25em 0.625em 0;
 }		
-.commentlist {
+#commentlist {
 	padding: 1.25em 0;
 }
 .commentmetadata {
 	margin-top: 0;
 }
-ol.commentlist, ol.commentlist li {	
+ol#commentlist, ol#commentlist li {	
 	list-style: none;
 	margin:0; padding:0;
 }
-ol.commentlist li {
+ol#commentlist li {
 	border: 1px solid #eee;
 	font-size: 14px; 
 	font-size: 1.4rem;
@@ -524,26 +625,26 @@ ol.commentlist li {
 	padding: 0.625em; 
 	margin: 1em 0;	
 }
-ol.commentlist ul li,
-ol.commentlist ol li {
+ol#commentlist ul li,
+ol#commentlist ol li {
 	border: none;
 }
-ol.commentlist ul li{
+ol#commentlist ul li{
 	list-style: disc;
 }
-ol.commentlist ol li {
+ol#commentlist ol li {
 	list-style: decimal;
 }
-ol.commentlist ul.children {
+ol#commentlist ul.children {
 	margin: 0.625em 0.625em 0 1.25em;
 	padding: 0;
 }
-ol.commentlist ul.children li {
+ol#commentlist ul.children li {
 	border: none;
 	border-top: 1px solid #eee;
 	list-style: none;
 }
-ol.commentlist li p {
+ol#commentlist li p {
 	padding: 0.625em 0;
 }
 .commentform {
@@ -576,8 +677,8 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border: 1px solid #DDD;
-	border-color: #DDD #DDD #bbb #DDD;
+	border: 1px solid #ddd;
+	border-color: #ddd #ddd #bbb #ddd;
 	border-radius: 3px;
 	background: #fafafa; /* Old browsers */
 	background: -moz-linear-gradient(top,  #fafafa 60%, #e6e6e6 100%); /* FF3.6+ */
@@ -594,7 +695,7 @@ input[type="submit"] {
 	font-size: 14px;
 	font-size: 1.4rem;
 	line-height: 2;
-	padding: 1.12em 1.5em .88em;
+	padding: .25em 1.5em;
 	text-shadow: 0 1px 0 rgba(255,255,255,.5);
 }
 button:hover,
@@ -642,18 +743,20 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 	border: 0;
 	padding: 0;
 }
+input[type=password],
 input[type=text],
 textarea {
 	color: #666;
-	border: 1px solid #DDD;
+	border: 1px solid #ddd;
 	border-radius: 3px;
 }
 input[type=text]:focus,
 textarea:focus {
 	color: #111;
 }
+input[type=password],
 input[type=text] {
-	padding: 3px;
+	padding: 5px 3px;
 	margin-left: 5px;
 }
 textarea {
@@ -672,14 +775,17 @@ textarea {
 }
 #searchform #searchsubmit {
 	float: left;
+	font-size: 14px;	
+	font-size: 1.4rem;
 	margin-left: 0.125em;
-	padding: 0.3125em; 
+	padding: 0.1875em 0.5em; 
 	vertical-align: middle;
 }
 #searchform input#s {	
-	float: left;	
-	font-size: 0.8125em;
-	padding: 0.9375em 0.625em;
+	float: left;
+	font-size: 14px;	
+	font-size: 1.4rem;
+	padding: 0.625em;
 	width: 70%;
 }
 

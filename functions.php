@@ -20,8 +20,10 @@ function blm_theme_setup() {
 	/* Add theme support for post thumbnails (featured images). */
 	add_theme_support( 'post-thumbnails');
 	
-	/* Custom Theme Options */
-	require( get_template_directory() . '/inc/theme-options.php' );
+	/**
+	 * Customizer additions
+	 */
+	require( get_template_directory() . '/inc/customizer.php' );
 }
 
 /* Add your nav menus function to the 'init' action hook. */

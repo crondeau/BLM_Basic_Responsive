@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Header Suuport if you want to use it
+ * Custom Header Suport if you want to use it
  * http://codex.wordpress.org/Custom_Headers
  *
  *

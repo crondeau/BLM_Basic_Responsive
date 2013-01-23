@@ -5,54 +5,50 @@
  * @package blm_basic
  */
 ?>
-<?php $options = get_option( 'blm_basic_theme_options' ); ?>
 
 	<ul class="social-media">
-		<?php if ( $options['twitterurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['twitterurl']; ?>" class="twitter"><?php _e( 'Twitter', 'blm_basic' ); ?></a></li>
+		<?php if ( get_theme_mod( 'twitter' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'twitter' ); ?>" class="twitter" target="_blank"><?php _e( 'Twitter', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'facebook' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'facebook' ); ?>" class="facebook" target="_blank"><?php __( 'Facebook', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'pinterest' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'pinterest' ); ?>" class="pinterest" target="_blank"><?php __( 'Pinterest', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'linkedin' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'linkedin' ); ?>" class="linkedin" target="_blank"><?php _e( 'LinkedIn', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'googleplus' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'googleplus' ); ?>" class="googleplus" target="_blank"><?php __( 'Google Plus', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'flickr' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'flickr' ); ?>" class="flickr" target="_blank"><?php __( 'Flickr', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'youtube' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'youtube' ); ?>" class="youtube" target="_blank"><?php __( 'YouTube', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'vimeo' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'vimeo' ); ?>" class="vimeo" target="_blank"><?php __( 'Vimeo', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>
+		
+		<?php if ( get_theme_mod( 'dribble' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'dribble' ); ?>" class="dribble" target="_blank"><?php __( 'Dribble', 'blm_basic' ); ?></a></li>
+		<?php endif; ?>	
+		
+		<?php if ( get_theme_mod( 'delicious' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'delicious' ); ?>" class="delicious" target="_blank"><?php _e( 'Delicious', 'blm_basic' ); ?></a></li>
 		<?php endif; ?>
 
-		<?php if ( $options['facebookurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['facebookurl']; ?>" class="facebook"><?php _e( 'Facebook', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['pinteresturl'] != '' ) : ?>
-			<li><a href="<?php echo $options['pinteresturl']; ?>" class="pinterest"><?php _e( 'Pinterest', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['flickrurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['flickrurl']; ?>" class="flickr"><?php _e( 'Flickr', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['linkedinurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['linkedinurl']; ?>" class="linkedin"><?php _e( 'LinkedIn', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['googleplusurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['googleplusurl']; ?>" class="googleplus"><?php _e( 'Google Plus', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['vimeourl'] != '' ) : ?>
-			<li><a href="<?php echo $options['vimeourl']; ?>" class="vimeo"><?php _e( 'Vimeo', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
+		<?php if ( get_theme_mod( 'github' ) ) : ?>
+			<li><a href="<?php echo get_theme_mod( 'github' ); ?>" class="github" target="_blank"><?php _e( 'Git Hub', 'blm_basic' ); ?></a></li>
+			<?php endif; ?>		
 
-		<?php if ( $options['youtubeurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['youtubeurl']; ?>" class="youtube"><?php _e( 'Youtube', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['dribbleurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['dribbleurl']; ?>" class="dribble"><?php _e( 'Dribble', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['deliciousurl'] != '' ) : ?>
-			<li><a href="<?php echo $options['deliciousurl']; ?>" class="delicious"><?php _e( 'Delicious', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-		
-		<?php if ( $options['githuburl'] != '' ) : ?>
-			<li><a href="<?php echo $options['githuburl']; ?>" class="github"><?php _e( 'Git Hub', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
-
-		<?php if ( ! $options['hiderss'] ) : ?>
-			<li><a href="<?php bloginfo( 'rss2_url' ); ?>" class="rss"><?php _e( 'RSS Feed', 'blm_basic' ); ?></a></li>
-		<?php endif; ?>
 	</ul><!-- #social-icons-->
