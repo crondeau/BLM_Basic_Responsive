@@ -51,7 +51,6 @@ License
 You are free to use this theme for any personal or commercial project with no attribution. 
 You are free to modify the theme for clients or stock themes and distribute the derivative work. 
 Do not distribute the theme as is as your own. 
-Link back to original post at http://www.bluelimemedia.com/teaching/wordpress if you would like to 'distribute' the theme.
 
 Of course a link to my site is always appreciated.
 
