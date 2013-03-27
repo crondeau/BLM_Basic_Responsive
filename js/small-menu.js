@@ -2,15 +2,15 @@
  * Handles toggling the main navigation menu for small screens.
  */
 jQuery( document ).ready( function( $ ) {
-	var $masthead = $( '#masthead' ),
+	var $branding = $( '#branding' ),
 	    timeout = false;
 
 	$.fn.smallMenu = function() {
-		$masthead.find( '.site-navigation' ).removeClass( 'main-navigation' ).addClass( 'main-small-navigation' );
-		$masthead.find( '.site-navigation h1' ).removeClass( 'assistive-text' ).addClass( 'menu-toggle' );
+		$branding.find( '.site-navigation' ).removeClass( 'main-navigation' ).addClass( 'main-small-navigation' );
+		$branding.find( '.site-navigation h1' ).removeClass( 'assistive-text' ).addClass( 'menu-toggle' );
 
 		$( '.menu-toggle' ).unbind( 'click' ).click( function() {
-			$masthead.find( '.menu' ).toggle();
+			$branding.find( '.menu' ).toggle();
 			$( this ).toggleClass( 'toggled-on' );
 		} );
 	};
@@ -30,9 +30,9 @@ jQuery( document ).ready( function( $ ) {
 			if ( browserWidth < 600 ) {
 				$.fn.smallMenu();
 			} else {
-				$masthead.find( '.site-navigation' ).removeClass( 'main-small-navigation' ).addClass( 'main-navigation' );
-				$masthead.find( '.site-navigation h1' ).removeClass( 'menu-toggle' ).addClass( 'assistive-text' );
-				$masthead.find( '.menu' ).removeAttr( 'style' );
+				$branding.find( '.site-navigation' ).removeClass( 'main-small-navigation' ).addClass( 'main-navigation' );
+				$branding.find( '.site-navigation h1' ).removeClass( 'menu-toggle' ).addClass( 'assistive-text' );
+				$branding.find( '.menu' ).removeAttr( 'style' );
 			}
 		}, 200 );
 	} );

@@ -127,12 +127,12 @@ function blm_customize($wp_customize) {
 		'type'    => 'text',
 	) );
 	
-	$wp_customize->add_setting( 'delicious', array(
+	$wp_customize->add_setting( 'tumblr', array(
 		'default'        => '',
 	) );
 
-	$wp_customize->add_control( 'delicious', array(
-		'label'   => __( 'Delcious url:', 'blm_basic' ),
+	$wp_customize->add_control( 'tumblr', array(
+		'label'   => __( 'Tumblr url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
 	) );

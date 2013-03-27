@@ -24,7 +24,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>" />
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<title><?php wp_title('&#124;', true, 'right'); ?><?php bloginfo('name'); ?></title>
+	<title><?php wp_title(); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() ?>/favicon.ico" />
@@ -36,8 +36,8 @@
 <body <?php body_class(); ?>>
 	
 <div id="wrap">
-	
-	<header id="branding">
+		
+	<header id="branding" class="site-header" role="banner">
 		<hgroup>
 			<h1 id="logo"><a href="<?php echo home_url() ?>/"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
@@ -48,15 +48,18 @@
 	<?php $header_image = get_header_image();
 	if ( ! empty( $header_image ) ) { ?>
 
-		<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
+		<a href="<?php echo home_url() ?>/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /></a>
 
 	<?php } ?>
 		</hgroup>
-	</header>
-	
-	<nav id="top-nav" role="navigation" class="site-navigation">		
-		<h1 class="assistive-text"><?php _e( 'Menu', 'blm_basic' ); ?></h1>
-		<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'blm_basic' ); ?>"><?php _e( 'Skip to content', 'blm_basic' ); ?></a></div>
 		
-		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
-	</nav>
+		<nav class="site-navigation main-navigation">
+			<h1 class="assistive-text"><?php _e( 'menu', 'blm_basic' ); ?></h1>
+			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'blm_basic' ); ?>"><?php _e( 'Skip to content', 'blm_basic' ); ?></a></div>
+
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav>	
+		
+	</header>	
+	
+	
