@@ -458,6 +458,14 @@ blockquote {
 .social-media li {
 	float: left;
 	padding: 0 5px;
+	position: relative;
+}
+.social-media a {
+	height: 24px;
+	left: 2px;
+	width: 24px;
+	position: absolute;
+	top: 0;
 }
 
 /* Primary Navigation
