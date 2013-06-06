@@ -107,6 +107,16 @@ function blm_customize($wp_customize) {
 		'type'    => 'text',
 	) );
 	
+	$wp_customize->add_setting( 'instagram', array(
+		'default'        => '',
+	) );
+
+	$wp_customize->add_control( 'instagram', array(
+		'label'   => __( 'Instagram url:', 'blm_basic' ),
+		'section' => 'blm_socmed_settings',
+		'type'    => 'text',
+	) );
+	
 	$wp_customize->add_setting( 'youtube', array(
 		'default'        => '',
 	) );
