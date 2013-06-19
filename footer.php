@@ -9,7 +9,7 @@
 		<p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?></p>
 	</footer>
 	
-</div><!-- end of wrapper -->
+</div><!-- !wrap -->
 <?php wp_footer(); ?>
 </body>
 </html>
