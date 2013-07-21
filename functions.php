@@ -18,7 +18,7 @@ function blm_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	/* Add theme support for post thumbnails (featured images). */
-	add_theme_support( 'post-thumbnails');
+	add_theme_support( 'post-thumbnails' );
 	
 	/**
 	 * Customizer additions

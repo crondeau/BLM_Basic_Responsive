@@ -674,7 +674,8 @@ footer {
 }
 footer p {
 	color: #d4d4d4;
-	font-size: 0.75em; 
+	font-size: 12px;
+	font-size: 1.2rem;
 	padding: 0.625em;
 }
 footer a {
