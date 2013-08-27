@@ -32,7 +32,6 @@ html {
 	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
 	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
 }
-
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
 	display: block;
 }
@@ -118,7 +117,7 @@ a img {
 	vertical-align: top;
 }
 .genericon:hover {
-	color: #666;
+	color: #ff0000;
 }
 
 /**
@@ -379,14 +378,13 @@ textarea {
 
 /* General Styles 
 ----------------------------------------------*/
-
 /* let's clear some floats */
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
 .clearfix { zoom: 1; }
 
 a {
-	color: #666;
+	color: #ff0000;
 	cursor: pointer;
 	text-decoration: none;
 	-o-transition: .2s;
@@ -408,6 +406,7 @@ p {
 h1,h2,h3,h4,h5,h6 {
 	color: #444;
 	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-weight: 400;
 }
 h1 {
 	font-size: 30px;
@@ -477,6 +476,8 @@ blockquote {
 }
 
 /* Social Media icons
+ * These are positioned absolutely right now. If you move them to the sidebar
+ * to the sidebar or footer, just get rid of that. 
 ------------------------------------------------------ */
 .social-media {
 	list-style: none;
@@ -748,7 +749,6 @@ ol#commentlist li p {
 
 /* Forms and buttons 
 --------------------------------*/
-
 button,
 html input[type="button"],
 input[type="reset"],
