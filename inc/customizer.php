@@ -55,6 +55,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Twitter url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 5,
 	) );
 	
 	$wp_customize->add_setting( 'facebook', array(
@@ -65,6 +66,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Facebook url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 10,
 	) );
 	
 	$wp_customize->add_setting( 'googleplus', array(
@@ -75,6 +77,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Google + url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 15,
 	) );
 	
 	$wp_customize->add_setting( 'linkedin', array(
@@ -85,6 +88,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'LinkedIn url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 20,
 	) );
 	
 	$wp_customize->add_setting( 'flickr', array(
@@ -95,6 +99,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Flickr url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 25,
 	) );
 	
 	$wp_customize->add_setting( 'pinterest', array(
@@ -105,6 +110,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Pinterest url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 30,
 	) );
 	
 	$wp_customize->add_setting( 'instagram', array(
@@ -115,6 +121,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Instagram url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 35,
 	) );
 	
 	$wp_customize->add_setting( 'youtube', array(
@@ -125,6 +132,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'YouTube url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 40,
 	) );
 	
 	$wp_customize->add_setting( 'vimeo', array(
@@ -135,6 +143,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Vimeo url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 45,
 	) );
 	
 	$wp_customize->add_setting( 'tumblr', array(
@@ -145,6 +154,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Tumblr url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 50,
 	) );
 	
 	$wp_customize->add_setting( 'dribble', array(
@@ -155,6 +165,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Dribble url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 55,
 	) );
 	
 	$wp_customize->add_setting( 'github', array(
@@ -165,6 +176,7 @@ function blm_customize($wp_customize) {
 		'label'   => __( 'Github url:', 'blm_basic' ),
 		'section' => 'blm_socmed_settings',
 		'type'    => 'text',
+		'priority'=> 60,
 	) );
 	
 	

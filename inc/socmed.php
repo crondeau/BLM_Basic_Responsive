@@ -6,7 +6,7 @@
  */
 ?>
 
-	<ul class="social-media">
+	<ul class="social-media hide-for-small">
 		<?php if ( get_theme_mod( 'twitter' ) ) : ?>
 			<li><a href="<?php echo get_theme_mod( 'twitter' ); ?>"  class="genericon genericon-twitter" target="_blank"></a></li>
 		<?php endif; ?>

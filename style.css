@@ -890,8 +890,7 @@ textarea {
 	#wrap {
 		width: 96%; 
 	}
-	.social-media, 
-	#branding img {
+	.hide-for-small {
 		display: none;
 	}
 	

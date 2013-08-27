@@ -47,7 +47,7 @@
 	<?php $header_image = get_header_image();
 	if ( ! empty( $header_image ) ) { ?>
 
-		<a href="<?php echo home_url() ?>/"><img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /></a>
+		<a href="<?php echo home_url() ?>/"><img class="hide-for-small" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /></a>
 
 	<?php } ?>
 		</hgroup>
