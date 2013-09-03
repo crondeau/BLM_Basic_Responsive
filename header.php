@@ -43,7 +43,7 @@
 			<?php get_template_part( 'inc/socmed' ); ?>
 
 	<!-- if there's a header image, let's display it here 
-		 if you don't want to use the header image, just delete lines 46 to 53-->
+		 if you don't want to use the header image, just delete lines 46 to 52-->
 	<?php $header_image = get_header_image();
 	if ( ! empty( $header_image ) ) { ?>
 
