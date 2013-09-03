@@ -37,7 +37,6 @@
 <div id="wrap">
 		
 	<header id="branding" class="site-header" role="banner">
-		<hgroup>
 			<h1 id="logo"><a href="<?php echo home_url() ?>/"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
 			<?php get_template_part( 'inc/socmed' ); ?>
@@ -50,7 +49,6 @@
 		<a href="<?php echo home_url() ?>/"><img class="hide-for-small" src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /></a>
 
 	<?php } ?>
-		</hgroup>
 		
 		<nav class="site-navigation main-navigation">
 			<h1 class="assistive-text"><?php _e( 'menu', 'blm_basic' ); ?></h1>
