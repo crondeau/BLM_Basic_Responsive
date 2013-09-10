@@ -28,14 +28,6 @@ function blm_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'blm_customize_preview_js' );
 
-add_action ('admin_menu', 'blm_admin');
-function blm_admin() {
-
-	// add the Customize link to the admin menu
-	add_theme_page( 'Customize', 'Customize', 'edit_theme_options', 'customize.php' ); 
-
-}
-
 
 // add settings to create various social media text areas.
 
