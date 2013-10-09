@@ -178,9 +178,6 @@ hr {
 }
 
 /* Text elements */
-p {
-	margin-bottom: 1.5em;
-}
 ul, ol {
 	margin: 0 0 1.5em 2em;
 }
@@ -264,6 +261,9 @@ table {
 th {
 	font-weight: bold;
 }
+td, th {
+	padding: 3px 5px;
+}
 
 /* Forms and buttons 
 -----------------------------------------*/
@@ -336,7 +336,6 @@ textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 }
-
 
 /* Image Alignment
 ----------------------------------------------*/
@@ -441,7 +440,10 @@ blockquote {
 }
 
 /* Main Layout
------------------------------------------------*/
+ * The main container here is set to 1000px
+ * If you choose to set this to a different size, make sure you update the
+ * media query so that when you are at this breakpoint the container is set to 100%.
+-----------------------------------------------------------------------------------*/
 #wrap {
 	background: #FFF;
 	margin: 0 auto;
@@ -863,18 +865,13 @@ textarea {
 
 /* Media Queries
 -------------------------------------------------------------- */
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1000px) {
 	#wrap {
-		padding:0;
-		width: 98%; 	
+		width: 100%; 	
 	}	
 }
 
 @media screen and (max-width: 768px) {
-	#wrap {
-		padding: 0;
-		width: 98%; 
-	}
 	#content {
 		float: left; 
 		padding: 2%;
@@ -888,13 +885,9 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-	#wrap {
-		width: 96%; 
-	}
 	.hide-for-small {
 		display: none;
-	}
-	
+	}	
 	h1.menu-toggle {
 		background: #000;
 		color: #fff;
@@ -903,8 +896,7 @@ textarea {
 		font-size: 2.2rem;
 		padding-left: 20px;
 		margin: 0;
-	}
-	
+	}	
 	h1.menu-toggle:after {
 		content: "\f502";
 		display: inline-block;
@@ -946,7 +938,6 @@ textarea {
 		padding: 10px;
 		width: 168px;
 	}
-
 }
 
 @media screen and (max-width: 320px) {
