@@ -160,7 +160,7 @@ textarea {
 	-moz-font-smoothing:antialiased;
 	-webkit-font-smoothing:antialiased;
 	color: #333;
-	font-family: 'helvetica neue', arial, sans-serif;
+	font-family: Tahoma, Verdana, Segoe, sans-serif;
 	font-size: 16px; /* pixels are needed for IE 8 and lower :( */
 	font-size: 1.6rem; /* Snooka explains font resizing using rem - http://snook.ca/archives/html_and_css/font-size-with-rem */
 	line-height: 1.5;
@@ -406,7 +406,7 @@ p {
 }
 h1,h2,h3,h4,h5,h6 {
 	color: #444;
-	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-family: Georgia, Times, "Times New Roman", serif;
 	font-weight: 400;
 }
 h1 {
