@@ -66,6 +66,8 @@ function blm_register_sidebars() {
  */
 function blm_basic_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	
+	wp_enqueue_style('googleFonts', 'http://fonts.googleapis.com/css?family=Droid+Serif' );
 
 	wp_enqueue_script( 'blm_navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 	

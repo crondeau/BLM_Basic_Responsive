@@ -426,19 +426,19 @@ p {
 }
 h1,h2,h3,h4,h5,h6 {
 	color: #474747;
-	font-family: Georgia, Times, "Times New Roman", serif;
+	font-family: 'Droid Serif', Georgia, Times, 'Times New Roman', serif;
 	font-weight: 400;
 }
 h1 {
 	font-size: 30px;
 	font-size: 3.0rem;
-	line-height: 1.75em; /* 28px /16px */
+	line-height: 1.75em; 
 	margin: 0 0 0.625em;
 }
 h2,h2 a,h3,h4,h5,h6 {
 	font-size: 22px;
 	font-size: 2.2rem;
-	line-height: 1.25em; /*20px / 16px */
+	line-height: 1.25em;
 	margin: 0.625em 0;
 }
 h2 a {
