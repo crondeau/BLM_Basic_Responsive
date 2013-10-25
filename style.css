@@ -65,10 +65,30 @@ a img {
 }
 
 /* Text meant only for screen readers */
-.assistive-text {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+.screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
 }
 
 /* =Genericons
@@ -103,7 +123,7 @@ a img {
  */
 
 .genericon {
-	color: #000;
+	color: #3a3a3a;
 	display: inline-block;
 	width: 24px;
 	height: 24px;
@@ -159,7 +179,7 @@ select,
 textarea {
 	-moz-font-smoothing:antialiased;
 	-webkit-font-smoothing:antialiased;
-	color: #333;
+	color: #3a3a3a;
 	font-family: Tahoma, Verdana, Segoe, sans-serif;
 	font-size: 16px; /* pixels are needed for IE 8 and lower :( */
 	font-size: 1.6rem; /* Snooka explains font resizing using rem - http://snook.ca/archives/html_and_css/font-size-with-rem */
@@ -385,7 +405,7 @@ select {width: 100%;}
 .clearfix { zoom: 1; }
 
 a {
-	color: #ff0000;
+	color: #099;
 	cursor: pointer;
 	text-decoration: none;
 	-o-transition: .2s;
@@ -397,7 +417,7 @@ a {
 a:hover,
 a:focus,
 a:active {
-	color: #000;
+	color: #066;
 }
 p {
 	margin: 0;
@@ -405,7 +425,7 @@ p {
 	word-wrap: break-word;
 }
 h1,h2,h3,h4,h5,h6 {
-	color: #444;
+	color: #474747;
 	font-family: Georgia, Times, "Times New Roman", serif;
 	font-weight: 400;
 }
@@ -428,9 +448,9 @@ h2 a:hover {
 	text-decoration: underline;
 }
 blockquote {
-	color: #000;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
+	color: #3a3a3a;
+	border-top: 1px solid #3a3a3a;
+	border-bottom: 1px solid #3a3a3a;
 	font-size: 22px;
 	font-size: 2.2rem;	
 	font-style: italic;
@@ -502,7 +522,7 @@ blockquote {
 /* Primary Navigation
 -------------------------------------------------------------- */
 .main-navigation {
-	background: #000;
+	background: #3a3a3a;
 	clear: both;
 	display: block;
 	float: left;
@@ -512,14 +532,14 @@ blockquote {
 .main-navigation ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding: 0;
 }
 .main-navigation li {
 	float: left;
 	position: relative;
 }
 .main-navigation a {
-	color: #eee;
+	color: #fff;
 	display: block;
 	font-size: 16px;
 	font-size: 1.6rem;
@@ -546,22 +566,18 @@ blockquote {
 }
 .main-navigation ul ul a {
 	background: #f9f9f9;
-	border-bottom: 1px dotted #ddd;
-	color: #444;
+	color: #474747;
 	height: auto;
 	line-height: 1.4em;
 	padding: 10px;
 	width: 168px;
 }
+
 .main-navigation li:hover > a,
 .main-navigation ul ul :hover > a,
 .main-navigation a:focus {
-	background: #efefef;
-}
-.main-navigation li:hover > a,
-.main-navigation a:focus {
-	background: #f9f9f9;
-	color: #000;
+	background: #474747;
+	color: #fff;
 }
 .main-navigation ul li:hover > ul {
 	display: block;
@@ -575,9 +591,10 @@ blockquote {
 
 /* Small menu */
 .menu-toggle {
+	display: none;
 	cursor: pointer;
 }
-.main-small-navigation .menu {
+.main-small-navigation > ul {
 	display: none;
 }
 
@@ -662,7 +679,7 @@ blockquote {
 	text-decoration: none;
 }
 #sidebar a:hover {
-	color: #000;
+	color: #3a3a3a;
 }
 .widget_search label {
 	display:none;
@@ -885,66 +902,57 @@ textarea {
 	}
 }
 
+
 @media screen and (max-width: 600px) {
-	.hide-for-small {
+	.main-navigation ul {
 		display: none;
-	}	
-	h1.menu-toggle {
-		background: #000;
-		color: #fff;
+	}
+	.menu-toggle {
 		display: block;
-		font-size: 22px;
-		font-size: 2.2rem;
-		padding-left: 20px;
-		margin: 0;
-	}	
-	h1.menu-toggle:after {
-		content: "\f502";
-		display: inline-block;
-	    -webkit-font-smoothing: antialiased;
-	    font: normal 16px/1 'Genericons';
-		padding-left: 8px;
-	    vertical-align: -webkit-calc(-5px);
-		vertical-align:         calc(-5px);
+	}
+	.site-header .menu-toggle {
+	  background: #3a3a3a;
+	  color: white;
+	  font-family: Tahoma, Arial, sans-serif;
+	  font-size: 15px;
+	  font-size: 1.5rem;
+	  padding: 10px 22px;
+	  margin: 0;
+	}
+	.site-header .menu-toggle:hover {
+	  background: #474747;
+	}
+	.site-header .menu-toggle:before {
+	  content: '\2261';
+	  font-size: 14px;
+	  font-size: 1.4rem;
+	  margin-right: 10px;
+	}
+	.main-small-navigation ul,
+	.main-small-navigation ul ul {
+	  display: block;
 	}
 	.main-small-navigation ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		width: 100%;
+	  margin: 0;
+	  list-style: none;
 	}
-	.main-small-navigation li a {
-		border-bottom: 1px dotted #ddd;
-		display: block;
-		font-size: 16px;
-		font-size: 1.6rem;
-		padding: 5px 10px;
-		text-decoration: none;
+	.main-small-navigation a {
+	  display: block;
+	  color: white;
+	  padding: 10px 40px;
+	  text-decoration: none;
 	}
-	.main-small-navigation li a:hover {		
-		color: #000;
-		background: #f9f9f9;
+	.main-small-navigation li {
+	  background: #3a3a3a;
 	}
-	
-	.main-navigation ul ul ul {
-		left: 100%;
-		top: 0;
+	.main-small-navigation li:hover {
+	  background: #474747;
 	}
-	.main-navigation ul ul a {
-		background: #f9f9f9;
-		border-bottom: 1px dotted #ddd;
-		color: #444;
-		height: auto;
-		line-height: 1.4em;
-		padding: 10px;
-		width: 168px;
+	.main-small-navigation ul ul a {
+	  padding-left: 60px;
 	}
+	.main-small-navigation ul ul ul a {
+	  padding-left: 80px;
+	}	
 }
 
-@media screen and (max-width: 320px) {
-	#logo a {
-		font-size: 20px;
-		font-size: 2.0rem;
-		line-height: 1em;
-	}
-}

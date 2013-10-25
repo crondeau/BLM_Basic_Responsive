@@ -50,12 +50,12 @@
 
 	<?php } ?>
 		
-		<nav class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'menu', 'blm_basic' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'blm_basic' ); ?>"><?php _e( 'Skip to content', 'blm_basic' ); ?></a></div>
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<h1 class="menu-toggle"><?php _e( 'Menu', 'blm_basic' ); ?></h1>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'blm_basic' ); ?></a>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>	
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 3 ) ); ?>
+	</nav><!-- #site-navigation -->
 		
 	</header>	
 		
