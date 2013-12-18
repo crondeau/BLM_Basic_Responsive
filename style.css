@@ -874,18 +874,13 @@ textarea {
 }
 
 @media screen and (max-width: 768px) {
-	#content {
-		float: left; 
-		padding: 2%;
-		width: 96%; 
-	}
+	#content,
 	#sidebar {
 		float: left;  
 		padding: 2%;
 		width: 96%;
 	}
 }
-
 
 @media screen and (max-width: 600px) {
 	.main-navigation ul {
