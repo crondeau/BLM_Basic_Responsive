@@ -185,6 +185,13 @@ textarea {
 	font-size: 1.6rem; /* Snooka explains font resizing using rem - http://snook.ca/archives/html_and_css/font-size-with-rem */
 	line-height: 1.5;
 }
+/* This silliness below is needed here if we use rems because Chrome is being a dick lately
+* https://code.google.com/p/chromium/issues/detail?id=320754
+*/
+p, ul, ol, table, td, th, dl, dd, dt {
+	font-size: 16px; 
+	font-size: 1.6rem;
+}
 
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -602,8 +609,7 @@ blockquote {
 -----------------------------------------------------------*/
 #main {
 	float: left;
-	width: 98%;
-	padding: 0.625em;
+	width: 100%;
 }
 #content {
 	float: left;
