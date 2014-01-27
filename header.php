@@ -46,7 +46,6 @@
 	<header id="branding" class="site-header" role="banner">
 			<h1 id="logo"><a href="<?php echo home_url() ?>/"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
-			<?php get_template_part( 'inc/socmed' ); ?>
 
 		
 	<nav id="site-navigation" class="main-navigation" role="navigation">
