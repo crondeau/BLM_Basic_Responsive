@@ -20,10 +20,6 @@ function blm_theme_setup() {
 	/* Add theme support for post thumbnails (featured images). */
 	add_theme_support( 'post-thumbnails' );
 	
-	/**
-	 * Customizer additions
-	 */
-	require( get_template_directory() . '/inc/customizer.php' );
 }
 
 /* Add your nav menus function to the 'init' action hook. */
@@ -32,8 +28,6 @@ function blm_theme_setup() {
 /* Add custom actions. */
    add_action( 'widgets_init', 'blm_register_sidebars' );
 
-/* Implement the Custom Header feature */
-   require( get_template_directory() . '/inc/custom-header.php' );
 
 // Add menu features 
 function blm_register_menus() {
