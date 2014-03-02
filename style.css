@@ -235,19 +235,17 @@ input {
 -----------------------------------------*/
 embed,
 iframe,
-object,
-#main img {
+object {
 	max-width: 100%;
-	height: auto;
 }
 #branding img,
-#content img,
+#main img,
 img[class*="align"],
 img[class*="wp-image-"] {
 	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
 }
 #branding img,
-#content img,
+#main img,
 img.size-full {
 	max-width: 100%;
 	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
