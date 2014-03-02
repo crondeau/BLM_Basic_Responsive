@@ -393,7 +393,11 @@ blockquote p {
 	font-size: 2.2rem;
 	margin-bottom: 0px;
 }
-
+blockquote p cite {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-size: 1.8rem;
+}
 
 /* Main Layout
  * The main container here is set to 1000px
