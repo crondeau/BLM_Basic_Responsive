@@ -768,12 +768,23 @@ textarea {
 #searchform #searchsubmit {
 	border-radius: 0px;
 	float: left;
-	font-size: 14px;	
+	font-size: 14px;
 	font-size: 1.4rem;
 	line-height: 1.1;
 	padding: 0.625em; 
 	vertical-align: middle;
 }
+#searchform button#searchsubmit.submit {
+	border-radius: 0px;
+	float: left;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 1.1;
+	padding: 0.625em; 
+	vertical-align: middle;
+	color: white;
+}
+
 #searchform input#s {	
 	border-radius: 0px;
 	float: left;
