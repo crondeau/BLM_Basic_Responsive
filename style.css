@@ -748,7 +748,7 @@ textarea {
 	padding: 0.625em; 
 	vertical-align: middle;
 }
-#searchform button#searchsubmit.submit {
+#searchform button {
 	border-radius: 0px;
 	float: left;
 	font-size: 14px;
@@ -759,7 +759,7 @@ textarea {
 	color: white;
 }
 
-#searchform input#s {	
+#searchform .search-field {	
 	border-radius: 0px;
 	float: left;
 	font-size: 13px;	
