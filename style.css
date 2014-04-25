@@ -758,8 +758,7 @@ textarea {
 }
 
 /* Captions 
--------------------------------------------------------------*/
-	
+-------------------------------------------------------------*/	
 .wp-caption .wp-caption-text {
 	margin: 0.75em 0;
 	font-size: 13px;
@@ -812,7 +811,10 @@ textarea {
 .gallery-columns-9 .gallery-item {
 	max-width: 11.11%;
 }
-.gallery-caption {}
+.gallery-caption {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
 
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
