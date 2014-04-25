@@ -20,6 +20,9 @@ function blm_theme_setup() {
 	/* Add theme support for post thumbnails (featured images). */
 	add_theme_support( 'post-thumbnails' );
 	
+	/* Add theme support for HTML 5 galleries */
+	add_theme_support( 'html5', array( 'gallery', 'caption' ) );
+	
 }
 
 /* Add your nav menus function to the 'init' action hook. */
