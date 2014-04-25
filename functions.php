@@ -14,14 +14,20 @@ function blm_theme_setup() {
 	if ( !isset( $content_width ) )
 	$content_width = 640;
 
-	/* Add theme support for automatic feed links. */
+	// Add theme support for automatic feed links. 
 	add_theme_support( 'automatic-feed-links' );
 
-	/* Add theme support for post thumbnails (featured images). */
+	// Add theme support for post thumbnails (featured images). 
 	add_theme_support( 'post-thumbnails' );
 	
-	/* Add theme support for HTML 5 galleries */
-	add_theme_support( 'html5', array( 'gallery', 'caption' ) );
+	// Enable support for HTML5 markup.
+	add_theme_support( 'html5', array(
+		'comment-list',
+		'search-form',
+		'comment-form',
+		'gallery',
+		'caption',
+	) );
 	
 }
 
