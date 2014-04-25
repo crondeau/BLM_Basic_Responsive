@@ -1,0 +1,33 @@
+/* Sidebar Area 
+-------------------------------------------*/
+.widget {
+	padding: 3.5% 0;
+}
+#sidebar{
+	h4 {
+		border-bottom: 1px solid $light-grey;
+		@include fontsize(1.8, 2.5);
+		margin: 0 0 1em; 
+		padding: 0 0 0.5em; 
+		text-transform: uppercase;	
+	}
+	ul {
+		list-style: none;
+		margin-left: 0.5em;
+		li {
+			padding: 0.5em 0;
+			@include fontsize(1.4, 2);
+		}
+	}
+	a {
+		color: $grey;
+		text-decoration: none;
+		&:hover{
+			color: $link-hover;
+		}
+	}
+} 
+
+.widget_search label {
+	display:none;
+}

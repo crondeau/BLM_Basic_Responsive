@@ -1,0 +1,75 @@
+// Main Layout
+// The main container here is set to 1000px
+// If you choose to set this to a different size, make sure you update the
+// media query so that when you are at this breakpoint the container is set to 100%.
+
+#wrap {
+	background: $white;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	width: 1000px;
+}
+
+/* Header Area */
+#branding {
+	float: left;	
+	height: auto;
+	position: relative;
+	width: 100%;
+	img {
+		height: auto;
+		margin-bottom: -7px;
+		width: 100%;
+	}
+}	
+#logo {
+	display: block;
+	float: left;
+	margin: 2em 0 0.625em 1em;
+	a {
+		font-weight: 700;
+		text-decoration: none;
+	}
+}
+#tagline {
+	display: none;
+}
+
+/* Main Body Content Area */
+#main {
+	float: left;
+	width: 100%;
+}
+#content {
+	float: left;
+	width: 68%;
+	padding: 2%;
+}
+#sidebar {
+	float: right;
+	width: 25%;
+	padding: 0 1%;
+}
+
+
+/* Footer area */
+#footer {
+	border-top: 1px dotted $light-grey;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+	p {
+		color: $grey;
+		@include fontsize(1.2, 2);
+		padding: 0.625em;
+	}	
+	a {
+		color: $light-grey;
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

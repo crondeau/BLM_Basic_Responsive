@@ -1,0 +1,65 @@
+body,
+button,
+input,
+select,
+textarea {
+	-moz-font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+	color: $color-main;
+	font-family: $font-sans;
+	@include fontsize(1.6, 2);
+}
+/* This sillyness below is needed here if we use rems because Chrome is being a dick lately
+* https://code.google.com/p/chromium/issues/detail?id=320754
+*/
+p, ul, ol, table, td, th, dl, dd, dt {
+	@include fontsize(1.6, 2.5);
+}
+
+a {
+	color: $link-color;
+	cursor: pointer;
+	text-decoration: none;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+a:hover,
+a:focus,
+a:active {
+	color: $link-hover;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $heading-color;
+	font-family: $font-serif;
+	font-weight: 400;
+}
+h1 {
+	@include fontsize(3, 3.5);
+	margin: 0 0 0.625em;
+}
+h2, h3, h4, h5, h6 {
+	@include fontsize(2.2, 3);
+	margin: 0.625em 0;
+}
+h2.post-title a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+blockquote {
+	color: $color-main;
+	border-left: 3px solid $link-color;	
+	font-style: italic;
+	font-family: $font-serif; 
+	margin: 0.625em 0;
+	padding: 0.625em;
+	p {
+		@include fontsize(2.2, 3);
+		margin-bottom: 0;
+	}
+}

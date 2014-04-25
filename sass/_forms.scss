@@ -1,0 +1,101 @@
+/* Comment Form 
+--------------------------------*/
+#respond {
+	margin-top: 30px;
+	padding: 1.25em 0;
+	p {
+		margin-bottom: 0.625em;
+	}
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	@include rounded(2px);
+	background: $link-color;
+	color: $white;
+	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
+	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1;
+	padding: 0.5em 1em;
+	text-transform: uppercase;
+}
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: $link-hover;
+}
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {	
+	color: $link-hover;
+	border: 1px solid $light-grey;
+	border-radius: 2px;
+	padding: 5px 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 98%;
+}
+textarea {
+	color: $link-hover;
+	border: 1px solid $light-grey;
+	border-radius: 2px;
+	padding: 5px 3px;
+	width: 98%;
+}
+
+/* Search Form
+-------------------------------------------*/
+#searchform {
+	display: inline-block;
+	position: relative;
+	width: 98%;
+	#searchsubmit {
+		@include rounded(0);
+		float: left;
+		@include fontsize(1.5, 2);
+		padding: 0.625em; 
+		vertical-align: middle;
+	}
+	button {	
+		border-radius: 0px;
+		color: $white;
+		float: left;
+		@include fontsize(1.4, 2);
+		padding: 0.625em;
+		vertical-align: middle;
+	}
+	.search-field {	
+		border-radius: 0px;
+		float: left;
+		font-size: 13px;	
+		font-size: 1.3rem;
+		padding: 0.625em;
+		width: 70%;
+	}
+}

@@ -1,0 +1,59 @@
+// COLOURS
+
+$bgcolor: #fff; 
+$color-main: #3a3a3a;
+
+$black: #252525;
+$white: #fff;
+$offwhite: #f0f1f1;
+$grey: #333;
+$light-grey: #b3b3b3;
+
+// Screen reader, warnings, etc...
+$blue: #21759b;
+$red: #f11;
+$yellow: #fff9c0;
+
+// Horizontal rules
+$hr: #ccc;
+
+// Links
+$link-color: #099;
+$link-hover: #066;
+
+// Headings
+$heading-color: #474747;
+
+// Buttons
+$button-bg: #099;
+$button-text: #fff;
+
+// FONT FAMILY
+$font-sans: Tahoma, Verdana, Segoe, sans-serif;
+$font-serif: 'Droid Serif', Georgia, Times, 'Times New Roman', serif;
+
+// Media queries
+$width-large: 1000px;
+$width-medium: 770px;
+$width-small: 500px;
+
+// Vertical Spacing
+$vspacing: 15px;
+
+
+// Normalize styles should stay at the top
+@import "_normalize";
+
+// Move mixins to their own partial
+@import "_mixins";
+
+@import "_global";
+@import "_typography";
+@import "_layout";
+@import "_navigation";
+@import "_blog";
+@import "_sidebar";
+@import "_comments";
+@import "_forms";
+@import "_images";
+@import "_mediaqueries";

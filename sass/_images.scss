@@ -1,0 +1,107 @@
+/* Media 
+-----------------------------------------*/
+embed,
+iframe,
+object,
+#main img {
+	max-width: 100%;
+	height: auto;
+}
+#branding img,
+#content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+#branding img,
+#content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: $vspacing;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: $vspacing;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+// Image Captions
+.wp-caption {
+	border: 1px solid $hr;
+	margin-bottom: $vspacing;
+	max-width: 100%;
+	padding: 0.25em;
+	
+
+	img[class*="wp-image-"] {
+		display: block;
+		margin: 0 auto;
+		max-width: 98%;
+	}
+	.wp-caption-text {
+		@include fontsize(1.3, 2);
+		text-align: center;
+		margin: 0.8075em 0;
+	}
+}
+
+/* Galleries */
+
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
+
