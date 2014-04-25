@@ -656,11 +656,15 @@ ol#commentlist ul.children li {
 ol#commentlist li p {
 	padding: 0.625em 0;
 }
-.commentform {
+#commentform {
 	padding: 1.25em 0;
 }
-.commentform p {
+#commentform p {
 	margin-bottom: 0.625em;
+}
+#commentform label {
+	display: inline-block;
+	width: 90px;
 }
 
 /* Hides the content explaining what html tags are allowed*/
@@ -699,27 +703,34 @@ input[type="submit"]:active {
 	border-color: #066;
 	background: #066;
 }
-input[type=email],
-input[type=password],
-input[type=text],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {	
+	color: #666;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	padding: 5px 3px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #111;
+}
+
 textarea {
 	color: #666;
 	border: 1px solid #ddd;
 	border-radius: 2px;
-}
-input[type=text]:focus,
-textarea:focus {
-	color: #111;
-}
-input[type=email],
-input[type=password],
-input[type=text] {
 	padding: 5px 3px;
-}
-textarea {
-	padding-left: 3px;
 	width: 98%;
 }
+
 
 /* Search Form
 -------------------------------------------*/
