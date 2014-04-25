@@ -342,16 +342,16 @@ h1 {
 	line-height: 1.75em; 
 	margin: 0 0 0.625em;
 }
-h2,h2 a,h3,h4,h5,h6 {
+h2, h3, h4, h5, h6 {
 	font-size: 22px;
 	font-size: 2.2rem;
 	line-height: 1.25em;
 	margin: 0.625em 0;
 }
-h2 a {
+h2.post-title a {
 	text-decoration: none;
 }
-h2 a:hover {
+h2.post-title  a:hover {
 	text-decoration: underline;
 }
 blockquote {
