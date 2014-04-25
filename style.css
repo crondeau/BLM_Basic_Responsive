@@ -585,24 +585,24 @@ blockquote p cite {
 
 /* Footer area
 ------------------------------------------------------------*/
-footer {
+#footer {
 	border-top: 1px dotted #d4d4d4;
 	clear: both;
 	margin: 0 auto;
 	text-align: center;
-	width: 96%;	
+	width: 100%;	
 }
-footer p {
+#footer p {
 	color: #d4d4d4;
 	font-size: 12px;
 	font-size: 1.2rem;
 	padding: 0.625em;
 }
-footer a {
+#footer a {
 	color: #d4d4d4;
 	text-decoration: none;
 }
-footer a:hover {
+#footer a:hover {
 	color: #d4d4d4;
 	text-decoration: underline;
 }
