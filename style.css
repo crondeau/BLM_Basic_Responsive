@@ -1,7 +1,7 @@
 /*
 Theme Name: Bluelime Media Responsive Basic Starter theme	
 Theme URI: http://www.bluelimemedia.com
-Description: Basic Responsive Starter Theme
+Description: Basic Responsive Starter Theme developed for teaching purposes.
 Version: 3.1
 
 License: GNU General Public License v2.0
@@ -558,6 +558,7 @@ blockquote p cite {
 	padding: 0 1.25em 0.3125em; 
 }
 .entrymeta {
+	clear: left;
 	color: #999;
 	border-top: dotted 1px #d4d4d4;
 	margin: 0.625em 0; 
@@ -737,6 +738,7 @@ input[type="submit"]:active {
 	border-color: #066;
 	background: #066;
 }
+input[type=email],
 input[type=password],
 input[type=text],
 textarea {
@@ -748,10 +750,10 @@ input[type=text]:focus,
 textarea:focus {
 	color: #111;
 }
+input[type=email],
 input[type=password],
 input[type=text] {
 	padding: 5px 3px;
-	margin-left: 5px;
 }
 textarea {
 	padding-left: 3px;
@@ -793,6 +795,51 @@ textarea {
 	padding: 0.625em;
 	width: 70%;
 }
+
+/* Galleries
+-------------------------------------------------------------- */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+.gallery-caption {}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+	display: none;
+}
+
 
 
 /* =Media Print
