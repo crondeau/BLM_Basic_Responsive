@@ -74,28 +74,22 @@ textarea {
 #searchform {
 	display: inline-block;
 	position: relative;
-	width: 98%;
-	#searchsubmit {
+	width: 98%;	
+	.search-field {	
 		@include rounded(0);
 		float: left;
-		@include fontsize(1.5, 2);
-		padding: 0.625em; 
-		vertical-align: middle;
+		@include fontsize(1.4, 2);
+		height: 20px;
+		padding: 8px;
+		width: 70%;
 	}
 	button {	
-		border-radius: 0px;
+		@include rounded(0);
 		color: $white;
 		float: left;
-		@include fontsize(1.4, 2);
-		padding: 0.625em;
+		@include fontsize(1.5, 2);
+		font-weight: 400;		
+		padding: 9px 10px;
 		vertical-align: middle;
-	}
-	.search-field {	
-		border-radius: 0px;
-		float: left;
-		font-size: 13px;	
-		font-size: 1.3rem;
-		padding: 0.625em;
-		width: 70%;
 	}
 }

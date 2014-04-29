@@ -781,36 +781,32 @@ textarea {
   position: relative;
   width: 98%;
 }
-#searchform #searchsubmit {
+#searchform .search-field {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  float: left;
-  font-size: 15px;
-  line-height: 20px;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  padding: 0.625em;
-  vertical-align: middle;
-}
-#searchform button {
-  border-radius: 0px;
-  color: white;
   float: left;
   font-size: 14px;
   line-height: 20px;
   font-size: 1.4rem;
   line-height: 2rem;
-  padding: 0.625em;
-  vertical-align: middle;
-}
-#searchform .search-field {
-  border-radius: 0px;
-  float: left;
-  font-size: 13px;
-  font-size: 1.3rem;
-  padding: 0.625em;
+  height: 20px;
+  padding: 8px;
   width: 70%;
+}
+#searchform button {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: white;
+  float: left;
+  font-size: 15px;
+  line-height: 20px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  padding: 9px 10px;
+  vertical-align: middle;
 }
 
 /* Media 
