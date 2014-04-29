@@ -12,7 +12,6 @@ Author: Christine Rondeau and Robert Dall
 Author URI: http://www.bluelimemedia.com
 */
 
-
 /* Reset and Normalize 
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -889,53 +888,61 @@ img.size-full {
   margin: 0.8075em 0;
 }
 
-/* Galleries */
+/* Galleries 
+------------------------------------*/
 .gallery {
-  margin-bottom: 1.5em;
+  margin: auto;
+}
+.gallery img {
+  border: 1px solid #b3b3b3;
 }
 
 .gallery-item {
   display: inline-block;
+  margin-top: 10px;
   text-align: center;
   vertical-align: top;
   width: 100%;
 }
 
 .gallery-columns-2 .gallery-item {
-  max-width: 50%;
+  width: 50%;
 }
 
 .gallery-columns-3 .gallery-item {
-  max-width: 33.33%;
+  width: 33%;
 }
 
 .gallery-columns-4 .gallery-item {
-  max-width: 25%;
+  width: 25%;
 }
 
 .gallery-columns-5 .gallery-item {
-  max-width: 20%;
+  width: 20%;
 }
 
 .gallery-columns-6 .gallery-item {
-  max-width: 16.66%;
+  width: 16.6666%;
 }
 
 .gallery-columns-7 .gallery-item {
-  max-width: 14.28%;
+  width: 14.2857%;
 }
 
 .gallery-columns-8 .gallery-item {
-  max-width: 12.5%;
+  width: 12.5%;
 }
 
 .gallery-columns-9 .gallery-item {
-  max-width: 11.11%;
+  width: 11.1111%;
 }
 
 .gallery-caption {
   font-size: 13px;
+  line-height: 20px;
   font-size: 1.3rem;
+  line-height: 2rem;
+  margin-left: 0;
 }
 
 .gallery-columns-6 .gallery-caption,
