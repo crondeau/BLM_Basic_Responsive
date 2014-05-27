@@ -762,11 +762,6 @@ textarea:focus {
 }
 
 textarea {
-  padding-left: 3px;
-  width: 98%;
-}
-
-textarea {
   color: #006666;
   border: 1px solid #b3b3b3;
   border-radius: 2px;
@@ -812,7 +807,6 @@ textarea {
 /* Media 
 -----------------------------------------*/
 embed,
-iframe,
 object,
 #main img {
   max-width: 100%;
