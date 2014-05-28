@@ -11,7 +11,6 @@ More information: http://codex.wordpress.org/Theme_Review#Licensing
 Author: Christine Rondeau and Robert Dall 
 Author URI: http://www.bluelimemedia.com
 */
-
 /* Reset and Normalize 
 -------------------------------------------------------------- */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -776,11 +775,6 @@ textarea:focus {
 }
 
 textarea {
-  padding-left: 3px;
-  width: 98%;
-}
-
-textarea {
   color: #006666;
   border: 1px solid #b3b3b3;
   border-radius: 2px;
@@ -826,26 +820,9 @@ textarea {
 /* Media 
 -----------------------------------------*/
 embed,
-object,
-#main img {
+iframe,
+object {
   max-width: 100%;
-  height: auto;
-}
-
-#branding img,
-#content img,
-img[class*="align"],
-img[class*="wp-image-"] {
-  height: auto;
-  /* Make sure images with WordPress-added height and width attributes are scaled correctly */
-}
-
-#branding img,
-#content img,
-img.size-full {
-  max-width: 100%;
-  width: auto;
-  /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 
 /* Alignment */
