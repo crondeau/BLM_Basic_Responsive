@@ -20,10 +20,12 @@
 	   		box-shadow: $x $y $blur $color;
 }
 
+@function calculateRem($size) {
+  $remSize: $size / 10px;
+  @return $remSize * 1rem;
+}
 
-@mixin fontsize($size:1.6, $line: $size * 1.5){
-    font-size:   ($size * 10) + px;
-    line-height: ($line * 10) + px;
-    font-size:   $size + rem;
-  line-height: $line + rem;
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }
