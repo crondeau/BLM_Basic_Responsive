@@ -718,6 +718,28 @@ ol#commentlist ul.children li {
   display: none;
 }
 
+/* Footer area */
+#footer {
+  border-top: 1px dotted #b3b3b3;
+  clear: both;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+#footer p {
+  color: #333333;
+  font-size: 12px;
+  font-size: 1.2rem;
+  padding: 0.625em;
+}
+#footer a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+#footer a:hover {
+  text-decoration: underline;
+}
+
 /* Comment Form 
 --------------------------------*/
 #respond {
