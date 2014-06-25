@@ -17,9 +17,7 @@ input[type="submit"] {
 	color: $white;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	-webkit-appearance: button; /* Corrects inability to style clickable 'input' types in iOS */
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1;
+	@include font-size(16px);
 	padding: 0.5em 1em;
 	text-transform: uppercase;
 }
@@ -54,7 +52,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
-	color: #111;
+	color: $grey;
 }
 textarea {
 	color: $link-hover;
@@ -73,7 +71,7 @@ textarea {
 	.search-field {	
 		@include rounded(0);
 		float: left;
-		@include fontsize(1.4, 2);
+		@include font-size(14px);
 		height: 20px;
 		padding: 8px;
 		width: 70%;
@@ -82,9 +80,9 @@ textarea {
 		@include rounded(0);
 		color: $white;
 		float: left;
-		@include fontsize(1.5, 2);
+		@include font-size(15px);
 		font-weight: 400;		
-		padding: 9px 10px;
+		padding: 8px 10px 9px;
 		vertical-align: middle;
 	}
 }

@@ -19,7 +19,7 @@ ol#commentlist, ol#commentlist li {
 }
 ol#commentlist li {
 	border: 1px solid $light-grey;
-	@include fontsize(1.4, 2);
+	@include font-size(14px);
 	padding: 0.625em; 
 	margin: 1em 0;
 	p {
@@ -46,7 +46,6 @@ ol#commentlist ul.children {
 		list-style: none;
 	}
 }
-
 #commentform {
 	padding: 1.25em 0;
 	p {

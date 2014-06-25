@@ -7,15 +7,12 @@ textarea {
 	-webkit-font-smoothing:antialiased;
 	color: $color-main;
 	font-family: $font-sans;
-	@include fontsize(1.6, 2);
+	@include font-size(16px);
+	line-height: 1.4;
 }
-/* This sillyness below is needed here if we use rems because Chrome is being a dick lately
-* https://code.google.com/p/chromium/issues/detail?id=320754
-*/
 p, ul, ol, table, td, th, dl, dd, dt {
-	@include fontsize(1.6, 2.5);
+	@include font-size(16px);
 }
-
 a {
 	color: $link-color;
 	cursor: pointer;
@@ -38,11 +35,11 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 400;
 }
 h1 {
-	@include fontsize(3, 3.5);
+	@include font-size(30px);
 	margin: 0 0 0.625em;
 }
 h2, h3, h4, h5, h6 {
-	@include fontsize(2.2, 3);
+	@include font-size(22px);
 	margin: 0.625em 0;
 }
 h2.post-title a {
@@ -59,7 +56,7 @@ blockquote {
 	margin: 0.625em 0;
 	padding: 0.625em;
 	p {
-		@include fontsize(2.2, 3);
+		@include font-size(22px);
 		margin-bottom: 0;
 	}
 }

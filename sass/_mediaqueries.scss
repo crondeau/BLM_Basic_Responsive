@@ -17,67 +17,14 @@
 
 /* Media Queries
 -------------------------------------------------------------- */
-@media screen and (max-width: $width-large) {
-	#wrap {
-		width: 100%; 	
-	}	
-}
-
 @media screen and (max-width: $width-medium) {
-	#content,
-	#sidebar {
-		float: left; 
-		padding: 2%;
-		width: 96%; 
+	.hide-on-medium {
+		display: none;
 	}
 }
 
 @media screen and (max-width: $width-small) {
-	.main-navigation ul {
+	.hide-on-small {
 		display: none;
 	}
-	.menu-toggle,
-	.main-small-navigation ul,
-	.main-small-navigation ul ul {
-		display: block;
-	}
-	.site-header .menu-toggle {
-		background: $color-main;
-		color: $white;
-		font-family: $font-sans;
-		@include fontsize(1.6);
-		padding: 10px 22px;
-		margin: 0;
-		text-transform: uppercase;
-		&:hover {
-			background: $heading-color;
-		}
-		&:before {
-			content: '\2261';
-			@include fontsize(1.6);
-			margin-right: 10px;
-		}
-	}
-	.main-small-navigation ul {
-		margin: 0;
-		list-style: none;
-		li {
-			background: $color-main;
-			&:hover {
-				background: $heading-color;
-			}
-			a {
-				display: block;
-				color: $white;
-				padding: 10px 40px;
-				text-decoration: none;
-			}
-		}
-	}
-	.main-small-navigation ul ul a {
-	  padding-left: 60px;
-	}
-	.main-small-navigation ul ul ul a {
-	  padding-left: 80px;
-	}	
 }

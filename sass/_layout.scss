@@ -1,14 +1,15 @@
 // Main Layout
-// The main container here is set to 1000px
-// If you choose to set this to a different size, make sure you update the
-// media query so that when you are at this breakpoint the container is set to 100%.
-
 #wrap {
 	background: $white;
 	margin: 0 auto;
 	padding: 0;
 	position: relative;
-	width: 1000px;
+	max-width: $width-large;
+}
+@media screen and (max-width: $width-large) {
+	#wrap {
+		width: 100%; 	
+	}	
 }
 
 /* Header Area */
@@ -52,6 +53,15 @@
 	padding: 0 1%;
 }
 
+@media screen and (max-width: $width-medium) {
+	#content,
+	#sidebar {
+		float: left; 
+		padding: 2%;
+		width: 96%; 
+	}
+}
+
 
 /* Footer area */
 #footer {
@@ -62,7 +72,7 @@
 	width: 100%;
 	p {
 		color: $grey;
-		@include fontsize(1.2, 2);
+		@include font-size(12px);
 		padding: 0.625em;
 	}	
 	a {

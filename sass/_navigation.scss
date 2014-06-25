@@ -30,9 +30,7 @@
 }
 
 .main-navigation ul ul {
-	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	@include shadow(0, 3px, 3px, rgba(0,0,0,0.2));
 	display: none;
 	float: left;
 	margin: 0;
@@ -59,7 +57,6 @@
 .main-navigation ul li:hover > ul {
 	display: block;
 }
-
 .main-navigation .current-menu-item > a,
 .main-navigation .current-menu-ancestor > a,
 .main-navigation .current_page_item > a,
@@ -74,4 +71,54 @@
 }
 .main-small-navigation > ul {
 	display: none;
+}
+
+@media screen and (max-width: $width-small) {
+	.main-navigation ul {
+		display: none;
+	}
+	.menu-toggle,
+	.main-small-navigation ul,
+	.main-small-navigation ul ul {
+		display: block;
+	}
+	.menu-toggle {
+		background: $color-main;
+		color: $white;
+		font-family: $font-sans;
+		@include font-size(16px);
+		padding: 10px 22px;
+		margin: 0;
+		text-transform: uppercase;
+		&:hover {
+			background: $heading-color;
+		}
+		&:before {
+			content: '\2261';
+			@include font-size(16px);
+			margin-right: 10px;
+		}
+	}
+	.main-small-navigation ul {
+		margin: 0;
+		list-style: none;
+		li {
+			background: $color-main;
+			&:hover {
+				background: $heading-color;
+			}
+			a {
+				display: block;
+				color: $white;
+				padding: 10px 40px;
+				text-decoration: none;
+			}
+		}
+	}
+	.main-small-navigation ul ul a {
+	  padding-left: 60px;
+	}
+	.main-small-navigation ul ul ul a {
+	  padding-left: 80px;
+	}	
 }

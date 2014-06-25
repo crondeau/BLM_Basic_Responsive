@@ -37,7 +37,7 @@ object{
 		max-width: 98%;
 	}
 	.wp-caption-text {
-		@include fontsize(1.3, 2);
+		@include font-size(13px);
 		text-align: center;
 		margin: 0.8075em 0;
 	}
@@ -84,7 +84,7 @@ object{
 }
 
 .gallery-caption {
-	@include fontsize(1.3, 2);
+	@include font-size(13px);
 	margin-left: 0;
 }
 

@@ -6,7 +6,7 @@
 #sidebar{
 	h4 {
 		border-bottom: 1px solid $light-grey;
-		@include fontsize(1.8, 2.5);
+		@include font-size(18px);
 		margin: 0 0 1em; 
 		padding: 0 0 0.5em; 
 		text-transform: uppercase;	
@@ -16,7 +16,7 @@
 		margin-left: 0.5em;
 		li {
 			padding: 0.5em 0;
-			@include fontsize(1.4, 2);
+			@include font-size(14px);
 		}
 	}
 	a {
@@ -27,7 +27,6 @@
 		}
 	}
 } 
-
 .widget_search label {
 	display:none;
 }
