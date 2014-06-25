@@ -17,15 +17,19 @@ ol#commentlist, ol#commentlist li {
 	list-style: none;
 	margin:0; padding:0;
 }
-ol#commentlist li {
-	border: 1px solid $light-grey;
-	@include font-size(14px);
-	padding: 0.625em; 
-	margin: 1em 0;
-	p {
-		padding: 0.625em 0;
+ol#commentlist {
+	border-top: 1px solid $light-grey;
+	li {
+		border-bottom: 1px solid $light-grey;
+		@include font-size(14px);
+		padding: 0.625em; 
+		margin: 0;
+		p {
+			padding: 0.625em 0;
+		}
 	}
 }
+
 ol#commentlist ul li,
 ol#commentlist ol li {
 	border: none;
@@ -41,9 +45,9 @@ ol#commentlist ul.children {
 	margin: 0.625em 0.625em 0 1.25em;
 	padding: 0;
 	li {
-		border: none;
 		border-top: 1px solid $light-grey;
 		list-style: none;
+		padding-top: 5px;
 	}
 }
 #commentform {
