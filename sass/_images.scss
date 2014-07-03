@@ -5,8 +5,13 @@ iframe,
 object{
 	max-width: 100%;
 }
+#content img {
+	height: auto;
+	max-width: 100%;
+}
 
-/* Alignment */
+/* Alignment
+------------------------------------*/
 .alignleft {
 	display: inline;
 	float: left;
@@ -23,7 +28,8 @@ object{
 	margin: 0 auto;
 }
 
-// Image Captions
+/* Captions 
+------------------------------------*/
 .wp-caption {
 	border: 1px solid $hr;
 	margin-bottom: $vspacing;

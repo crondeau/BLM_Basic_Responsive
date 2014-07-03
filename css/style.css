@@ -864,7 +864,13 @@ object {
   max-width: 100%;
 }
 
-/* Alignment */
+#content img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Alignment
+------------------------------------*/
 .alignleft {
   display: inline;
   float: left;
@@ -883,6 +889,8 @@ object {
   margin: 0 auto;
 }
 
+/* Captions 
+------------------------------------*/
 .wp-caption {
   border: 1px solid #cccccc;
   margin-bottom: 15px;
