@@ -1,0 +1,25 @@
+/* Header Area 
+---------------------------*/
+#branding {
+	float: left;	
+	height: auto;
+	position: relative;
+	width: 100%;
+	img {
+		height: auto;
+		margin-bottom: -7px;
+		width: 100%;
+	}
+}	
+#logo {
+	display: block;
+	float: left;
+	margin: 2em 0 0.625em 1em;
+	a {
+		font-weight: 700;
+		text-decoration: none;
+	}
+}
+#tagline {
+	display: none;
+}
