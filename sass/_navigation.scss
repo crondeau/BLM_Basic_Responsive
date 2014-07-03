@@ -67,7 +67,6 @@
 /* Small menu */
 .menu-toggle {
 	display: none;
-	cursor: pointer;
 }
 .main-small-navigation > ul {
 	display: none;
@@ -89,9 +88,14 @@
 		@include font-size(16px);
 		padding: 10px 22px;
 		margin: 0;
+		text-align: left;
 		text-transform: uppercase;
+		width: 100%;
 		&:hover {
 			background: $heading-color;
+		}
+		&:focus {
+			outline:0 none;
 		}
 		&:before {
 			content: '\2261';
