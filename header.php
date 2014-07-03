@@ -32,15 +32,15 @@
 <div id="wrap">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'blm_basic' ); ?></a>
 	
-	<header id="branding" class="site-header" role="banner">
+	<header id="masthead" class="site-header" role="banner">
+		<div id="branding">
 			<h1 id="logo"><a href="<?php echo home_url() ?>/"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 id="tagline"><?php bloginfo( 'description' ); ?></h2>
-
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<h1 class="menu-toggle"><?php _e( 'Menu', 'blm_basic' ); ?></h1>
-
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 3 ) ); ?>
-	</nav><!-- #site-navigation -->
+		</div>
 		
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Menu', 'blm_basic' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation -->		
 	</header>	
 		
