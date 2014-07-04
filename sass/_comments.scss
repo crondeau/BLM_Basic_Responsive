@@ -7,18 +7,15 @@
 	float: left;
 	padding: 0 1.25em 0.625em 0;
 }		
-#commentlist {
-	padding: 1.25em 0;
-}
 .commentmetadata {
 	margin-top: 0;
 }
-ol#commentlist, ol#commentlist li {	
-	list-style: none;
-	margin:0; padding:0;
-}
-ol#commentlist {
+
+#commentlist {
 	border-top: 1px solid $light-grey;
+	list-style: none;
+	margin: 0; 
+	padding: 1.25em 0;
 	li {
 		border-bottom: 1px solid $light-grey;
 		@include font-size(14px);
@@ -30,18 +27,19 @@ ol#commentlist {
 	}
 }
 
-ol#commentlist ul li,
-ol#commentlist ol li {
+#commentlist ul li,
+#commentlist ol li {
 	border: none;
 	padding: 0;
 }
-ol#commentlist ul li{
+#commentlist ul li{
 	list-style: disc;
 }
-ol#commentlist ol li {
+#commentlist ol li {
 	list-style: decimal;
 }
-ol#commentlist ul.children {
+#commentlist .children {
+	list-style: none;
 	margin: 0.625em 0.625em 0 1.25em;
 	padding: 0;
 	li {

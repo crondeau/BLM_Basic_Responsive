@@ -1,55 +1,62 @@
 <?php
 /**
  * The template for displaying Comments.
- * Both Comment form and the comments themselves are generated
- * The form is simply the standard WordPress as described in the Codex reference: comment_form()
  *
- * @link http://codex.wordpress.org/Function_Reference/comment_form
- * @package blm_basic
+ * The area of the page that contains both current comments
+ * and the comment form.
+ *
+ * @package BLM Basic
  */
+
+/*
+ * If the current post is protected by a password and
+ * the visitor has not yet entered the password we will
+ * return early without loading the comments.
+ */
+if ( post_password_required() ) {
+	return;
+}
 ?>
 
-<?php
-	if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) )
-		die ( 'Please do not load this page directly. Thanks.' );
+<div id="comments" class="comments-area">
 
-	if ( post_password_required() ) { ?>
-		<p class="nocomments">This post is password protected. Enter the password to view comments.</p>
-	<?php
-		return;
-	}
-?>
+	<?php // You can start editing here -- including this comment! ?>
 
-<?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>
+		<h3 class="comments-title">
+			<?php
+				printf( _nx( 'One comment:', '%1$s comments:', get_comments_number(), 'comments title', 'blm_basic' ),
+					number_format_i18n( get_comments_number() ) );
+			?>
+		</h3>
 
-	<h3 id="comments"><?php comments_number( 'No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+		<ol id="commentlist">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+                    'avatar_size'=> 50,
+				) );
+			?>
+		</ol><!-- .comment-list -->
 
-	<ol id="commentlist">
-	<?php wp_list_comments('avatar_size=45'); ?>
-	</ol>
-	
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below">
-			<h3 class="screen-reader-text"><?php _e( 'Comment navigation', 'blm_basic' ); ?></h3>
-			<div class="nav-previous"><?php previous_comments_link( __( '&laquo; Older Comments', 'blm_basic' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &raquo;', 'blm_basic' ) ); ?></div>
-		</nav>
+		<nav id="comment-nav-below" class="comment-navigation clear" role="navigation">
+			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'blm_basic' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&laquo; Previous', 'blm_basic' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Next &raquo;', 'blm_basic' ) ); ?></div>
+		</nav><!-- #comment-nav-below -->
 		<?php endif; // check for comment navigation ?>
 
- <?php else : // this is displayed if there are no comments so far ?>
+	<?php endif; // have_comments() ?>
 
-	<?php if ( comments_open() ) : ?>
-		<!-- If comments are open, but there are no comments. -->
-
-	 <?php else : // comments are closed ?>
-		<!-- If comments are closed. -->
-		<p class="nocomments">Comments are closed.</p>
-
+	<?php
+		// If comments are closed and there are comments, let's leave a little note, shall we?
+		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
+		<p class="no-comments"><?php _e( 'Comments are Closed.', 'blm_basic' ); ?></p>
 	<?php endif; ?>
-<?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+	<?php comment_form(); ?>
 
-<?php comment_form(); ?>
-
-<?php endif; // if you delete this the sky will fall on your head ?>
+</div><!-- #comments -->
