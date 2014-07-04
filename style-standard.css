@@ -289,6 +289,9 @@ select {
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
   background-color: #f0f1f1;
@@ -385,20 +388,8 @@ blockquote p {
   margin-bottom: 0;
 }
 
-#wrap {
-  background: white;
-  margin: 0 auto;
-  padding: 0;
-  position: relative;
-  max-width: 1000px;
-}
-
-@media screen and (max-width: 1000px) {
-  #wrap {
-    width: 100%;
-  }
-}
-/* Header Area */
+/* Header Area 
+---------------------------*/
 #branding {
   float: left;
   height: auto;
@@ -425,7 +416,21 @@ blockquote p {
   display: none;
 }
 
-/* Main Body Content Area */
+/* Main Layout
+---------------------------*/
+#wrap {
+  background: white;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 1000px) {
+  #wrap {
+    width: 100%;
+  }
+}
 #main {
   float: left;
   width: 100%;
@@ -524,7 +529,6 @@ blockquote p {
 /* Small menu */
 .menu-toggle {
   display: none;
-  cursor: pointer;
 }
 
 .main-small-navigation > ul {
@@ -550,10 +554,15 @@ blockquote p {
     font-size: 1.6rem;
     padding: 10px 22px;
     margin: 0;
+    text-align: left;
     text-transform: uppercase;
+    width: 100%;
   }
   .menu-toggle:hover {
     background: #474747;
+  }
+  .menu-toggle:focus {
+    outline: 0 none;
   }
   .menu-toggle:before {
     content: '\2261';
@@ -667,53 +676,47 @@ blockquote p {
   padding: 0 1.25em 0.625em 0;
 }
 
-#commentlist {
-  padding: 1.25em 0;
-}
-
 .commentmetadata {
   margin-top: 0;
 }
 
-ol#commentlist, ol#commentlist li {
+#commentlist {
+  border-top: 1px solid #b3b3b3;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1.25em 0;
 }
-
-ol#commentlist {
-  border-top: 1px solid #b3b3b3;
-}
-ol#commentlist li {
+#commentlist li {
   border-bottom: 1px solid #b3b3b3;
   font-size: 14px;
   font-size: 1.4rem;
   padding: 0.625em;
   margin: 0;
 }
-ol#commentlist li p {
+#commentlist li p {
   padding: 0.625em 0;
 }
 
-ol#commentlist ul li,
-ol#commentlist ol li {
+#commentlist ul li,
+#commentlist ol li {
   border: none;
   padding: 0;
 }
 
-ol#commentlist ul li {
+#commentlist ul li {
   list-style: disc;
 }
 
-ol#commentlist ol li {
+#commentlist ol li {
   list-style: decimal;
 }
 
-ol#commentlist ul.children {
+#commentlist .children {
+  list-style: none;
   margin: 0.625em 0.625em 0 1.25em;
   padding: 0;
 }
-ol#commentlist ul.children li {
+#commentlist .children li {
   border-top: 1px solid #b3b3b3;
   list-style: none;
   padding-top: 5px;
@@ -869,7 +872,13 @@ object {
   max-width: 100%;
 }
 
-/* Alignment */
+#content img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Alignment
+------------------------------------*/
 .alignleft {
   display: inline;
   float: left;
@@ -888,6 +897,8 @@ object {
   margin: 0 auto;
 }
 
+/* Captions 
+------------------------------------*/
 .wp-caption {
   border: 1px solid #cccccc;
   margin-bottom: 15px;
