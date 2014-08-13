@@ -63,6 +63,7 @@ textarea {
 		height: 20px;
 		padding: 8px;
 		width: 70%;
+		-webkit-appearance: none;
 	}
 	button {	
 		@include rounded(0);

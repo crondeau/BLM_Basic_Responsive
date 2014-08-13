@@ -550,6 +550,9 @@ blockquote p {
     background: #3a3a3a;
     color: white;
     font-family: Tahoma, Verdana, Segoe, sans-serif;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
     font-size: 16px;
     font-size: 1.6rem;
     padding: 10px 22px;
@@ -847,6 +850,7 @@ textarea {
   height: 20px;
   padding: 8px;
   width: 70%;
+  -webkit-appearance: none;
 }
 #searchform button {
   -webkit-border-radius: 0;

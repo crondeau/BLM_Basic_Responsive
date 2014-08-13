@@ -85,6 +85,7 @@
 		background: $color-main;
 		color: $white;
 		font-family: $font-sans;
+		@include rounded(0);
 		@include font-size(16px);
 		padding: 10px 22px;
 		margin: 0;
