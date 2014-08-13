@@ -7,6 +7,7 @@
 		margin-bottom: 0.625em;
 	}
 }
+
 button,
 html input[type="button"],
 input[type="reset"],
@@ -20,44 +21,31 @@ input[type="submit"] {
 	@include font-size(16px);
 	padding: 0.5em 1em;
 	text-transform: uppercase;
+	&:focus, 
+	&:hover {
+		background: $link-hover;
+	}
 }
-button:hover,
-html input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover,
-button:focus,
-html input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-html input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	background: $link-hover;
-}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {	
-	color: $link-hover;
+	color: $grey;
 	border: 1px solid $light-grey;
-	border-radius: 2px;
+	@include rounded(2px);
 	padding: 5px 3px;
+	-webkit-appearance: none;
+	&:focus {
+		color: $grey;
+	}
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-	color: $grey;
-}
 textarea {
-	color: $link-hover;
+	color: $grey;
 	border: 1px solid $light-grey;
-	border-radius: 2px;
+	@include rounded(2px);
 	padding: 5px 3px;
 	width: 98%;
 }
@@ -78,7 +66,6 @@ textarea {
 	}
 	button {	
 		@include rounded(0);
-		color: $white;
 		float: left;
 		@include font-size(15px);
 		font-weight: 400;		
