@@ -92,8 +92,9 @@
 		text-align: left;
 		text-transform: uppercase;
 		width: 100%;
-		&:hover {
-			background: $heading-color;
+		&:hover,
+		&:focus {
+			background: $grey;
 		}
 		&:focus {
 			outline:0 none;
@@ -104,13 +105,14 @@
 			margin-right: 10px;
 		}
 	}
+
 	.main-small-navigation ul {
 		margin: 0;
 		list-style: none;
 		li {
 			background: $color-main;
 			&:hover {
-				background: $heading-color;
+				background: $grey;
 			}
 			a {
 				display: block;

@@ -16,6 +16,9 @@
 	list-style: none;
 	margin: 0; 
 	padding: 1.25em 0;
+	ul, ol {
+		padding: 0;
+	}
 	li {
 		border-bottom: 1px solid $light-grey;
 		@include font-size(14px);
@@ -27,11 +30,6 @@
 	}
 }
 
-#commentlist ul li,
-#commentlist ol li {
-	border: none;
-	padding: 0;
-}
 #commentlist ul li{
 	list-style: disc;
 }
@@ -59,5 +57,5 @@
 	}
 }
 
-/* Hides the content explaining what html tags are allowed*/
+/* Hides the content explaining what html tags are allowed */
 .form-allowed-tags {display: none;}

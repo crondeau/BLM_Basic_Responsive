@@ -1,6 +1,6 @@
 <?php
 /**
- * This template gerates the links to previous and next posts on the single template
+ * This template generates the links to previous and next posts on the single template
  *
  * @package blm_basic
  */
