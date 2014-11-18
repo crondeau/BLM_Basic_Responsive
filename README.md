@@ -1,7 +1,9 @@
 BLM_Basic_Responsive NOW with Sass
 ===================================
 
-This theme is no longer maintained. Please use https://github.com/crondeau/WP-starter-theme instead.
+NOTE:This theme is no longer maintained. Please use https://github.com/crondeau/WP-starter-theme instead.
+
+===========================================================================================================
 
 Basic starter theme for responsive WordPress sites. 
 
