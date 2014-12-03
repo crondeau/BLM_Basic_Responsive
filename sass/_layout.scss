@@ -1,0 +1,38 @@
+/* Main Layout
+---------------------------*/
+#wrap {
+	background: $white;
+	margin: 0 auto;
+	padding: 0;
+	position: relative;
+	max-width: $width-large;
+}
+@media screen and (max-width: $width-large) {
+	#wrap {
+		width: 100%; 	
+	}	
+}
+
+#main {
+	float: left;
+	width: 100%;
+}
+#content {
+	float: left;
+	width: 68%;
+	padding: 2%;
+}
+#sidebar {
+	float: right;
+	width: 25%;
+	padding: 0 1%;
+}
+
+@media screen and (max-width: $width-medium) {
+	#content,
+	#sidebar {
+		float: left; 
+		padding: 2%;
+		width: 96%; 
+	}
+}

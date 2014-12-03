@@ -1,0 +1,62 @@
+body,
+button,
+input,
+select,
+textarea {
+	-moz-font-smoothing:antialiased;
+	-webkit-font-smoothing:antialiased;
+	color: $color-main;
+	font-family: $font-sans;
+	@include font-size(16px);
+	line-height: 1.4;
+}
+p, ul, ol, table, td, th, dl, dd, dt {
+	@include font-size(16px);
+}
+a {
+	color: $link-color;
+	cursor: pointer;
+	text-decoration: none;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	transition: .2s;
+}
+a:hover,
+a:focus,
+a:active {
+	color: $link-hover;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color: $heading-color;
+	font-family: $font-serif;
+	font-weight: 400;
+}
+h1 {
+	@include font-size(30px);
+	margin: 0 0 0.625em;
+}
+h2, h3, h4, h5, h6 {
+	@include font-size(22px);
+	margin: 0.625em 0;
+}
+h2.post-title a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+blockquote {
+	color: $color-main;
+	border-left: 3px solid $link-color;	
+	font-style: italic;
+	font-family: $font-serif; 
+	margin: 0.625em 0;
+	padding: 0.625em;
+	p {
+		@include font-size(22px);
+		margin-bottom: 0;
+	}
+}

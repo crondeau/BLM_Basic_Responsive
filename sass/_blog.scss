@@ -1,0 +1,32 @@
+/* Main body blog content formatting
+--------------------------------------------------------------*/
+.hentry {
+	padding: 0 0 1.25em;
+	ul, ol {
+		margin: 0 1.25em 0.3125em; 
+		padding: 0 1.25em 0.3125em; 
+	}
+}
+.entrymeta {
+	color: $grey;
+	border-top: 1px solid $light-grey;
+	margin: 0.625em 0; 
+	padding: 0.3125em 0;
+	p {
+		@include font-size(13px);
+		margin: 0.3125em 0; 
+	}
+}
+.post-navigation {
+	@include font-size(15px);
+	padding: 2em 0;
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+} 
